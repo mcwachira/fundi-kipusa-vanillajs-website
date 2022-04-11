@@ -1,0 +1,2288 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*---------------- navbar ------------------*/
+header {}
+
+header nav {
+  /* z-index: 100; */
+  background: #393E43;
+  opacity: .8;
+  height: 80px;
+}
+
+header a {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* .navbar-nav {
+  margin: 2rem 0;
+} */
+
+
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1630249677 svg {
+    width: calc(100% + 1.3px);
+    height: 0px;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 16rem;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  display: block;
+  font-size: 2rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item {
+  padding: 1.5rem;
+}
+
+header .nav-item>a {
+  color: #fff;
+}
+
+/* header .nav-link:active {
+  color: #ccb20a;
+}
+header .nav-link:hover {
+  color: #ccb20a;
+} */
+
+header .navbar-brand {
+  padding-left: 1rem;
+}
+
+header .donate {
+  margin-top: 1.3rem;
+  margin-right: 3rem;
+}
+
+.donate {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: #507600;
+  padding: 10px 44px;
+  margin: 0 6rem;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.donate:hover {
+  background-color: #9E1039;
+}
+
+.link-style {
+  color: #fff;
+}
+
+/*------------- HOME PAGE ----------------*/
+
+.header__background {
+  background-image: url('../images/background/youth.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* opacity: .8; */
+  height: 100vh;
+
+}
+
+.header_main-text {
+  position: absolute;
+  top: 30%;
+  transform: translate(20%, -50%);
+
+}
+
+.header_main-text>span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFEC00;
+  font-size: 5.5rem;
+  font-weight: bold;
+  background: transparent;
+
+
+}
+
+/*----------------------------------*/
+
+/* about */
+
+.about {
+  /* margin-top: 3rem; */
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.2rem;
+  padding: 5rem auto;
+  color: #FFF5E2;
+}
+
+
+.mission,
+.projects-about,
+.contact-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.7rem;
+  padding: 4rem 1rem;
+}
+
+.mission>h2,
+.projects-about>h2,
+.contact-about>h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.mission {
+  background-color: #507600;
+}
+
+.projects-about {
+
+  background-color: #4682B4;
+}
+
+.contact-about {
+
+  background-color: #FFE54E;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*------------------- what we do -----------------------*/
+
+.what_we_do {
+  background-color: #FAFAFA;
+
+}
+
+.what_we_do--main-text {
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  margin: 5rem auto;
+  color: #422;
+  font-weight: bold;
+  text-align: center;
+}
+
+.our-work {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+  margin: 7rem auto;
+  justify-content: center;
+}
+
+
+/* .our-work>div>i {
+  text-align: center;
+} */
+
+
+.our-work>div>p {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #334;
+  padding: 1rem auto;
+  margin-bottom: 5rem;
+  /* text-align: center; */
+}
+
+
+
+/*-------------------------------------------------*/
+
+
+/*---------------------  ABOUT CBO ---------------------*/
+
+.about__foundation {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.about__foundation--text {
+  background-color: #4682B4;
+  color: #FFFFFF;
+
+}
+
+.about__foundation--text_h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about__foundation--image-responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about__foundation--text_paragraph {
+  padding: 1rem 10rem;
+  font-size: 1.8rem;
+  margin: 1rem auto;
+  text-align: center;
+
+}
+
+.about__foundation--text_paragraph:last-child {
+  margin-top: 2rem;
+}
+
+.about__foundation--text_button {
+  border: none;
+  outline: none;
+  background-color: #0E2973;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+}
+
+
+/*---------------- cta--------------------------*/
+
+.cta-quotes {
+  margin: 5rem auto;
+  /* min-height: 100px;
+  height: auto; */
+  text-align: center;
+}
+
+.cta-quote {
+  font-weight: 100;
+  font-size: 3rem;
+  /* max-width: 800px; */
+  width: 100%;
+  line-height: 1.2;
+  position: relative;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.cta-quote:before,
+.cta-quote:after {
+  position: absolute;
+  color: #333;
+  font-size: 7rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.cta-quote:before {
+  content: "“";
+
+  top: -3rem;
+}
+
+.cta-quote:after {
+  content: "”";
+
+  bottom: .5rem;
+}
+
+cite {
+  line-height: 1;
+  margin: 3rem;
+  text-align: left;
+  font-size: 1.9rem;
+}
+
+.cta-video {
+  margin: 2rem auto;
+}
+
+.cta-contact__form--title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 2rem;
+  margin-top: 2rem;
+}
+
+.cta-contact__form>form {
+
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  padding: 2rem 20rem;
+  margin: 2rem auto;
+
+
+}
+
+.cta-contact__form>form>input {
+
+  margin: .5rem;
+  border: 2px solid #333;
+  padding: 1rem auto;
+  padding: 1rem 1rem;
+  font-size: 2rem;
+
+}
+
+.cta-contact__form>form>textarea {
+  border: 2px solid #333;
+  margin-top: 2rem;
+  padding: 2rem 7.5%;
+  font-size: 2rem;
+  color: #222;
+  text-align: left;
+
+}
+
+input {
+  text-align: left;
+  color: #000
+}
+
+::-webkit-input-placeholder {
+  text-align: left;
+  color: #000
+}
+
+:-moz-placeholder {
+  text-align: left;
+  color: #000
+}
+
+.cta-submit__button {
+  margin: -1rem 0;
+  padding: 1rem 10rem;
+  text-align: center;
+
+}
+
+/*-------------------------------------------------*/
+
+/* .about__nav {
+  background-color: #99f1b5;
+  height: 20vh;
+} */
+
+.affix {
+  padding: 0;
+  background-color: #99f1b5;
+  width: 100%;
+  color: #fff;
+}
+
+/*------------------   ABOUT PAGE --------------------------*/
+
+.about__section {
+  margin: 8rem auto;
+  background-color: #4682B4;
+
+}
+
+.about__main-text {
+  text-align: center;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 10rem 3rem;
+}
+
+
+.about__section--text {
+  margin: 5rem auto;
+  text-align: center;
+  font-size: 2.1rem;
+  padding: 2rem 20rem;
+
+}
+
+
+.about__image {
+  height: 100vh;
+}
+
+
+.about__statement {
+  margin: 1rem auto;
+  padding: 4rem 0;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-style: italic;
+  background-color: #507600;
+}
+
+.about__mission {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.about__mission--text {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+
+}
+
+.about__mission--text_h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.about__mission--image-responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about__mission--text_paragraph {
+  padding: 1rem 10rem;
+  font-size: 1.8rem;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+.about__mission--text_paragraph>p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__mission--statement {
+  margin: 0 auto;
+  padding: 5rem 0;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-style: italic;
+  background-color: #213E8C;
+  opacity: .9;
+}
+
+
+.about__mission--statement>a>button {
+  margin-top: 2rem;
+  background-color: #fff;
+  color: #213E8C;
+  font-weight: bold;
+}
+
+.about__team {
+  margin: 5rem auto;
+}
+
+.about__team-title {
+
+  margin: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.about__team--players {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+/* .about__team--players>h2,
+.about__team--players>p {
+  text-align: center;
+} */
+
+.about__team--players>h2 {
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+/*---------------- Agriculture  page ------------------------*/
+
+.agriculture {
+  margin-top: 15rem;
+}
+
+.agriculture>h1 {
+  font-size: 3.5rem;
+}
+
+.agriculture>p {
+  font-size: 2.8rem;
+  padding: 2rem 10rem;
+}
+
+.agriculture-video {
+  margin: 2rem auto;
+}
+
+.agriculture__section {
+  margin: 5rem auto;
+}
+
+.agriculture__section>h1 {
+  font-size: 3.5rem;
+}
+
+.agriculture__container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 5rem auto;
+  justify-content: center;
+}
+
+.agriculture__box {
+  margin: 1rem auto;
+}
+
+.agriculture__img--box {
+  width: 40%;
+  height: auto;
+}
+
+.agriculture__main-text {
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  margin: 5rem auto;
+  color: #422;
+  font-weight: 500;
+}
+
+.agriculture__box>h2 {
+  font-size: 2.8rem;
+  margin-top: 3rem;
+}
+
+.agriculture__box>p {
+  font-size: 2rem;
+  color: #334;
+  padding: 1rem auto;
+  margin-bottom: 5rem;
+}
+
+.agriculture__work>h1 {
+  font-size: 3.5rem;
+  margin: 3rem auto;
+  margin-bottom: 5rem;
+}
+
+.agriculture__work>.row {
+  margin: 5rem 5rem;
+}
+
+.agriculture__text-img>img {
+  width: 100%;
+  height: auto;
+  -webkit-image-orientation: from-image;
+  -moz-image-orientation: from-image;
+  image-orientation: from-image;
+}
+
+.agriculture__text>h2 {
+  font-size: 3rem;
+  color: rgba(51, 51, 51, 0.942);
+  font-weight: 700;
+  text-align: center;
+}
+
+.agriculture__text>p {
+  font-size: 2rem;
+  color: rgba(51, 51, 51, 0.942);
+  font-weight: 500;
+  padding: 2rem 10rem;
+}
+
+.agriculture__title {
+  font-size: 3.5rem;
+  color: rgba(51, 51, 51, 0.942);
+}
+
+.agriculture__gallery {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 2rem auto;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.agriculture__gallery--img {
+  width: 100%;
+}
+
+/*---------------- Engineering page ------------------------*/
+.engineering {
+  margin-top: 15rem;
+}
+
+.engineering>h1 {
+  font-size: 3.5rem;
+}
+
+.engineering>p {
+  font-size: 2.8rem;
+  padding: 2rem 10rem;
+}
+
+.engineering__section {
+  margin: 5rem auto;
+}
+
+.engineering__section>h1 {
+  font-size: 3.5rem;
+}
+
+.engineering__container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 5rem auto;
+  justify-content: center;
+}
+
+.engineering__box {
+  margin: 1rem auto;
+}
+
+.engineering__box>h2 {
+  font-size: 2.8rem;
+  margin-top: 3rem;
+}
+
+.engineering__box>p {
+  font-size: 2rem;
+  color: #334;
+  padding: 1rem 5rem;
+  margin-bottom: 5rem;
+}
+
+.engineering__img--box {
+  width: 20%;
+  height: auto;
+}
+
+/*---------------------------------------------------*/
+
+/*-------------------- Construction -----------------------------*/
+.construction {
+  margin-top: 15rem;
+}
+
+.construction>h1 {
+  font-size: 3.5rem;
+}
+
+.construction>p {
+  font-size: 2.8rem;
+  padding: 2rem 10rem;
+}
+
+.construction__section {
+  margin: 5rem auto;
+}
+
+.construction__section>h1 {
+  font-size: 3.5rem;
+}
+
+.construction__container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 5rem auto;
+  justify-content: center;
+}
+
+.construction__box {
+  margin: 1rem auto;
+}
+
+.construction__box>h2 {
+  font-size: 2.8rem;
+  margin-top: 3rem;
+}
+
+.construction__box>p {
+  font-size: 2rem;
+  color: #334;
+  padding: 1rem 5rem;
+  margin-bottom: 5rem;
+}
+
+.construction__img--box {
+  width: 20%;
+  height: auto;
+}
+
+/*---------------------------------------------------*/
+/*----------------Block Chain ---------------------------*/
+.blockchain {
+  margin-top: 15rem;
+}
+
+.blockchain>h1 {
+  font-size: 3.5rem;
+}
+
+.blockchain>p {
+  font-size: 2.8rem;
+  padding: 2rem 10rem;
+}
+
+.blockchain__section {
+  margin: 5rem auto;
+}
+
+.blockchain__section>h1 {
+  font-size: 3.5rem;
+}
+
+.blockchain__container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 5rem auto;
+  justify-content: center;
+}
+
+.blockchain__box {
+  margin: 1rem auto;
+}
+
+.blockchain__box>p {
+  font-size: 2.5rem;
+}
+
+.blockchain__img--box {
+  width: 20%;
+  height: auto;
+}
+
+/* .blockchain__img--box > img {
+  width: 100%;
+  height: auto;
+} */
+.blockchain__main-text {
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  margin: 5rem auto;
+  color: #422;
+  font-weight: 500;
+}
+
+.blockchain__box>h2 {
+  font-size: 2.8rem;
+  margin-top: 3rem;
+}
+
+.blockchain__box>p {
+  font-size: 2.3rem;
+  color: #334;
+  margin: 1rem auto;
+  padding: 1rem 3rem;
+  margin-bottom: 5rem;
+}
+
+.blockchain__work>h1 {
+  font-size: 3.5rem;
+  margin: 3rem auto;
+  margin-bottom: 5rem;
+}
+
+.blockchain__work>.row {
+  margin: 5rem 5rem;
+}
+
+.blockchain__text-img>img {
+  width: 100%;
+  height: auto;
+  -webkit-image-orientation: from-image;
+  -moz-image-orientation: from-image;
+  image-orientation: from-image;
+}
+
+.blockchain__text>h2 {
+  font-size: 3rem;
+  color: rgba(51, 51, 51, 0.942);
+  font-weight: 700;
+  text-align: center;
+}
+
+.blockchain__text>p {
+  font-size: 2rem;
+  color: rgba(51, 51, 51, 0.942);
+  font-weight: 500;
+  padding: 2rem 10rem;
+}
+
+.blockchain__title {
+  font-size: 3.5rem;
+  color: rgba(51, 51, 51, 0.942);
+}
+
+.blockchain__gallery {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 2rem auto;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.blockchain__gallery--img {
+  width: 100%;
+}
+
+.crypto__data {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* --- 3------*/
+  grid-gap: 5rem;
+  margin: 7rem auto;
+  justify-content: center;
+}
+
+.img-style {
+  width: 30%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.text-style {
+  text-align: center;
+}
+
+/*---------------------------------------------------*/
+
+/*------------------ contact  page ------------------------*/
+
+.section-contact {
+  /* margin-top: 7rem; */
+  /* margin-bottom: 10rem; */
+  margin-top: 5rem;
+}
+
+.contact__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  margin: 0 4rem;
+  overflow: hidden;
+}
+
+.contact__container--details {
+  margin-top: 3rem;
+}
+
+.contact__container--details>h3 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #818181;
+  margin-top: 1rem;
+  margin-left: 4rem;
+}
+
+.contact__details {
+  display: flex;
+  align-items: center;
+  margin-left: 4rem;
+  /* padding:1rem 2rem; */
+}
+
+.contact__text {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items:space-between; */
+}
+
+.contact__text>h4 {
+  font-size: 1.9rem;
+  color: #818181;
+}
+
+.contact__text>p {
+  font-size: 1.6rem;
+  /* color:#818181;
+  margin-top:-2rem; */
+}
+
+.contact__icon {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #878dff;
+  /* margin-right: 30px; */
+}
+
+.map__details {
+  margin-top: 5rem;
+  z-index: -20;
+}
+
+#map {
+  margin-top: 7rem;
+  height: 200px;
+  width: 100%;
+}
+
+.mapouter {
+  text-align: right;
+  height: 600px;
+  width: 600px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 600px;
+  width: 600px;
+}
+
+.form {
+  line-height: 30px;
+  color: #777;
+  margin-top: -10rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form__container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #f9f9f9;
+  padding: 2.5rem;
+  padding-right: 5rem;
+  margin: 5rem 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #818181;
+}
+
+#contact h4 {
+  margin: 0.5rem 0 1.5rem;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 20px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 0.5rem;
+  padding: 1rem;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #450000;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43a047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+@media (max-width: 992px) {
+  #map {
+    margin-top: 7rem;
+    height: 100px;
+    width: 100%;
+  }
+
+  .mapouter {
+    text-align: right;
+    height: 400px;
+    width: 400px;
+  }
+
+  .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+.contact__details {
+  margin-bottom: 20px;
+}
+
+.single-contact-address h5 {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 5px;
+  z-index: -20;
+}
+
+@media only screen and (max-device-width: 923px) {
+  .contact__container {
+    grid-gap: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768.98px) {
+  .contact__container--details>h3 {
+    margin: 0 auto;
+  }
+
+  .contact__details {
+    margin: 0 auto;
+    /* margin-left:20rem; */
+  }
+
+  .contact__container--map {
+    display: none;
+  }
+
+  .mapouter {
+    display: none;
+  }
+
+  .gmap_canvas {
+    display: none;
+  }
+
+  .section-contact {
+    margin-top: 1rem;
+  }
+
+  .contact__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 1rem;
+  }
+
+  .contact__container--details {
+    justify-self: center;
+  }
+
+  .contact__container--details>h3 {
+    text-align: center;
+  }
+
+  .contact__text {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*------------------------------------------*/
+
+/*------------------ footer -----------------------*/
+/* Generic styling */
+
+/* ul {
+   
+  } */
+
+footer {
+  background-color: #99f1b5;
+  line-height: 1.5;
+  width: 100%;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2.2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.ft-title {
+  color: #333;
+  font-family: "Merriweather", serif;
+  font-size: 2.5rem;
+  padding-bottom: 0.625rem;
+}
+
+/* Footer main */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 29.8125rem
+
+  /* 477px */
+) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (min-width: 77.5rem
+
+  /* 1240px */
+) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+.ft-main-item p {
+  font-size: 2.2rem;
+  color: #333;
+}
+
+/* Footer main | Newsletter form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+}
+
+/* input[type="email"] {
+  border: 0;
+  padding: 1rem 4rem;
+  margin-top: 0.3125rem;
+} */
+
+/* input[type="submit"] {
+  background-color: #f9e45b;
+  color: #333;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 2rem;
+  margin-top: 0.3125rem;
+} */
+
+/* Footer social */
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid;
+  padding-top: 1.25rem;
+}
+
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.ft-social>.ft-social-list>a>i {
+  font-size: 4rem;
+}
+
+/* Footer legal */
+.ft-legal {
+  padding: 0.9375rem 1.875rem;
+  font-size: 2.2rem;
+}
+
+.ft-legal-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #333;
+}
+
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+  flex: 1;
+}
+
+/*------------------------------------------*/
+
+/*------------------ media queries -----------------------*/
+@media only screen and (max-device-width: 768px) {
+  header nav .navbar-collapse .navbar-nav {
+    background-color: #fff;
+  }
+
+  header nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-size: 2rem;
+  }
+
+  .section_one {
+    width: 100%;
+    margin: 3rem auto;
+  }
+
+  .text-area>.main-text {
+    margin: 1rem 1rem;
+    padding: 3rem 1rem;
+    width: 100%;
+  }
+
+  .home__svg {
+    height: auto;
+    /* margin-bottom: 10rem; */
+  }
+
+  .donate {
+    /* display: block; */
+    color: rgb(133, 128, 128);
+    font-size: 2rem;
+    text-align: center;
+    background: #450000;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .our-team {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  /*----------------- agriculture page ------------------- */
+  .agriculture>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .agriculture__text>p {
+    font-size: 2rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 500;
+    padding: 2rem 1rem;
+  }
+
+  /*------------------crypto currencies---------------------------- */
+
+  .blockchain>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .engineering>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .engineering__box {
+    margin: 1rem auto;
+  }
+
+  .engineering__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem auto;
+    margin-bottom: 5rem;
+  }
+
+  /*----------------- Engineering ------------------- */
+}
+
+@media only screen and (max-device-width: 425px) {
+  /*------------- HOME PAGE ----------------*/
+
+  .fundikipusa-logo {
+    width: 50%;
+  }
+
+  section_one {
+    width: 100%;
+    margin: 5rem auto;
+  }
+
+  .text-area-heading {
+    color: #fff;
+    width: 100%;
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+  .text-area-heading>span {
+    background: #6db784;
+  }
+
+  .text-area>.main-text {
+    font-size: 2.5rem;
+    line-height: 3.4rem;
+    font-weight: 500;
+    width: 100%;
+    margin: 1rem 0;
+    color: #fffafa;
+    font-weight: 500;
+  }
+
+  .button {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    background-color: #f9e45b;
+    color: #333;
+    outline: none;
+    border: none;
+    /* margin: 1rem auto;
+    margin-left: auto;
+    text-align: center; */
+    padding: 1.8rem 2rem;
+  }
+
+  .button__about {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /*----------------------------------*/
+
+  /* utilities */
+
+  .about-us {
+    width: 100%;
+  }
+
+  .about-us .row {
+    margin-top: 1rem;
+  }
+
+  .about-us--img-details {
+    position: relative;
+  }
+
+  .about__img {
+    margin: 5rem auto;
+    width: 600px;
+    height: auto;
+  }
+
+  .about_us--img-text>p {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    background-color: rgb(110, 48, 13);
+    padding: 50px 10px;
+    width: 200px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.9rem;
+    color: rgba(253, 253, 253, 0.78);
+  }
+
+  .about-us__text {
+    margin: 5rem auto;
+    padding: 0 2rem;
+  }
+
+  .about-us__text>.panel>a {
+    text-decoration: none;
+    margin-top: 4rem;
+
+    font-size: 2rem;
+  }
+
+  .about-us__heading {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+  .about-us__heading>span {
+    background-color: #6db784;
+  }
+
+  .about-us__text {
+    margin: 5rem auto;
+    padding: 0 2rem;
+  }
+
+  .about-us__maintext {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .about-us__subtext {
+    font-size: 1.9rem;
+    margin-bottom: 5rem;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .text-area>.main-text {
+    padding: 3rem 1rem;
+  }
+
+  /*------------------   ABOUT PAGE --------------------------*/
+
+  .about__section {
+    margin: 1rem 1rem;
+    width: 100%;
+  }
+
+  .text-area>img {
+    width: 100%;
+  }
+
+  .about__main-text {
+    margin: 0 1rem;
+    padding: 5rem 1rem;
+    font-size: 2.7rem;
+  }
+
+  .about__main-text>.paragraph__main {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .about__us-page {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .about__us-page-row {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .about__us-page--heading {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    color: rgb(192, 79, 13);
+    text-align: center;
+  }
+
+  .about__us--text {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .text-area>img {
+    width: 100%;
+  }
+
+  .about-us__maintext {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .about__us-page--subtext {
+    font-size: 1.9rem;
+    margin-bottom: 5rem;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .about__page-quotes {
+    margin: 10rem auto;
+  }
+
+  .about__page-quote {
+    font-weight: 100;
+    font-size: 2rem;
+    /* max-width: 800px; */
+    width: 100%;
+    line-height: 1.4;
+    position: relative;
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  .about__page-quote:before,
+  .about__page-quote:after {
+    position: absolute;
+    color: #333;
+    font-size: 3.7rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .about__page-quote:before {
+    content: "“";
+    left: -1rem;
+    top: -4rem;
+  }
+
+  .about__page-quote:after {
+    content: "”";
+    right: 3rem;
+    bottom: -5rem;
+  }
+
+  cite {
+    line-height: 1;
+    text-align: left;
+    font-size: 1.9rem;
+  }
+
+  .about__page-cta {
+    margin: 5rem 0;
+  }
+
+  .about__page-cta:last-child {
+    margin: 2rem 3rem;
+  }
+
+  .about__page-cta--heading {
+    font-size: 4.6rem;
+    text-transform: capitalize;
+    margin: 1rem auto;
+    color: #422;
+    font-weight: 500;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about__page-cta-work {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin: 1rem auto;
+    justify-content: center;
+  }
+
+  .about__page-cta-work__box>h1 {
+    font-size: 4.8rem;
+    color: #f9e45b;
+  }
+
+  .about__page-cta-work__box>h2 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .about__page-cta-work__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem auto;
+    margin-bottom: 2rem;
+  }
+
+  .work__img {
+    width: 30%;
+    height: auto;
+  }
+
+  .our__team-page {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .our__team-row {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .our__team-heading {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    color: rgb(192, 79, 13);
+    text-align: center;
+  }
+
+  .our__team-text {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .text-area>img {
+    width: 100%;
+  }
+
+  .our__team-maintext {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .our__team--subtext {
+    font-size: 1.9rem;
+    margin-bottom: 5rem;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .team_heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /*---------------- Agriculture  page ------------------------*/
+
+  .agriculture {
+    margin-top: 5rem;
+  }
+
+  .agriculture>h1 {
+    font-size: 3rem;
+  }
+
+  .agriculture>p {
+    font-size: 2.7em;
+    padding: 2rem 1rem;
+  }
+
+  .agriculture__section {
+    margin: 3rem 1;
+  }
+
+  .agriculture__section>h1 {
+    font-size: 3.5rem;
+  }
+
+  .agriculture__container {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 3rem;
+    margin: 3rem auto;
+    justify-content: center;
+  }
+
+  .agriculture__box {
+    margin: 1rem auto;
+  }
+
+  .agriculture__img--box {
+    width: 40%;
+    height: auto;
+  }
+
+  .agriculture__main-text {
+    font-size: 3.6rem;
+    text-transform: capitalize;
+    margin: 5rem auto;
+    color: #422;
+    font-weight: 500;
+  }
+
+  .agriculture__box>h2 {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  .agriculture__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem auto;
+    margin-bottom: 5rem;
+  }
+
+  .agriculture__work>h1 {
+    font-size: 3.5rem;
+    margin: 3rem auto;
+    margin-bottom: 5rem;
+  }
+
+  .agriculture__work>.row {
+    margin: 5rem 5rem;
+  }
+
+  .agriculture__text-img>img {
+    width: 100%;
+    height: auto;
+    -webkit-image-orientation: from-image;
+    -moz-image-orientation: from-image;
+    image-orientation: from-image;
+  }
+
+  .agriculture__text>h2 {
+    font-size: 3rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .agriculture__text>p {
+    font-size: 2rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 500;
+    padding: 2rem 1rem;
+  }
+
+  .agriculture__title {
+    font-size: 3.5rem;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .agriculture__gallery {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 5rem;
+    margin: 2rem auto;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .agriculture__gallery--img {
+    width: 100%;
+  }
+
+  /*---------------- Engineering page ------------------------*/
+  .engineering {
+    margin-top: 3rem;
+  }
+
+  .engineering>h1 {
+    font-size: 3.2rem;
+  }
+
+  .engineering>p {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .engineering__section {
+    margin: 5rem auto;
+  }
+
+  .engineering__section>h1 {
+    font-size: 3.5rem;
+  }
+
+  .engineering__container {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 3rem;
+    margin: 3rem auto;
+    justify-content: center;
+  }
+
+  .engineering__box {
+    margin: 1rem auto;
+  }
+
+  .engineering__box>h2 {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  .engineering__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .engineering__img--box {
+    width: 20%;
+    height: auto;
+  }
+
+  /*---------------------------------------------------*/
+
+  /*-------------------- Construction -----------------------------*/
+  .construction {
+    margin-top: 3rem;
+  }
+
+  .construction>h1 {
+    font-size: 3.2rem;
+  }
+
+  .construction>p {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .construction__section {
+    margin: 3rem auto;
+  }
+
+  .construction__section>h1 {
+    font-size: 3.5rem;
+  }
+
+  .construction__container {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 3rem;
+    margin: 3rem auto;
+    justify-content: center;
+  }
+
+  .construction__box {
+    margin: 1rem auto;
+  }
+
+  .construction__box>h2 {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  .construction__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .construction__img--box {
+    width: 20%;
+    height: auto;
+  }
+
+  /*---------------------------------------------------*/
+  /*----------------Block Chain ---------------------------*/
+  .blockchain {
+    margin-top: 3rem;
+  }
+
+  .blockchain>h1 {
+    font-size: 3.5rem;
+  }
+
+  .blockchain>p {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .blockchain__section {
+    margin: 3rem auto;
+  }
+
+  .blockchain__section>h1 {
+    font-size: 3.5rem;
+  }
+
+  .blockchain__container {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 3rem;
+    margin: 3rem auto;
+    justify-content: center;
+  }
+
+  .blockchain__box {
+    margin: 1rem auto;
+  }
+
+  .blockchain__box>p {
+    font-size: 2.5rem;
+  }
+
+  .blockchain__img--box {
+    width: 20%;
+    height: auto;
+  }
+
+  /* .blockchain__img--box > img {
+  width: 100%;
+  height: auto;
+} */
+  .blockchain__main-text {
+    font-size: 3.6rem;
+    text-transform: capitalize;
+    margin: 5rem auto;
+    color: #422;
+    font-weight: 500;
+  }
+
+  .blockchain__box>h2 {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  .blockchain__box>p {
+    font-size: 2.3rem;
+    color: #334;
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .blockchain__work>h1 {
+    font-size: 3.5rem;
+    margin: 3rem auto;
+    margin-bottom: 5rem;
+  }
+
+  .blockchain__work>.row {
+    margin: 5rem 5rem;
+  }
+
+  .blockchain__text-img>img {
+    width: 100%;
+    height: auto;
+    -webkit-image-orientation: from-image;
+    -moz-image-orientation: from-image;
+    image-orientation: from-image;
+  }
+
+  .blockchain__text>h2 {
+    font-size: 3rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .blockchain__text>p {
+    font-size: 2rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 500;
+    padding: 2rem 10rem;
+  }
+
+  .blockchain__title {
+    font-size: 3.5rem;
+    color: rgba(51, 51, 51, 0.942);
+  }
+
+  .blockchain__gallery {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 5rem;
+    margin: 2rem auto;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .blockchain__gallery--img {
+    width: 100%;
+  }
+
+  .crypto__data {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+        minmax(300px, 1fr));
+    /* --- 3------*/
+    grid-gap: 5rem;
+    margin: 7rem auto;
+    justify-content: center;
+  }
+
+  .img-style {
+    width: 30%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .text-style {
+    text-align: center;
+  }
+
+  /*---------------------------------------------------*/
+}
+
+/*------------------------------------------------------- */
+
+@media only screen and (max-device-width: 375px) {
+  header nav .navbar-collapse .navbar-nav {
+    background-color: #fff;
+  }
+
+  header nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-size: 2rem;
+  }
+
+  .section_one {
+    width: 100%;
+    margin: 5rem auto;
+  }
+
+  .home__svg {
+    height: auto;
+    /* margin-bottom: 10rem; */
+  }
+
+  .text-area>.main-text {
+    padding: 3rem 1rem;
+  }
+
+  .donate {
+    /* display: block; */
+    color: rgb(133, 128, 128);
+    font-size: 2rem;
+    text-align: center;
+    background: #450000;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /*----------------- agriculture page ------------------- */
+  .agriculture>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .agriculture__text>p {
+    font-size: 2rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 500;
+    padding: 2rem auto;
+  }
+
+  /*------------------crypto currencies---------------------------- */
+
+  .blockchain>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .engineering>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .engineering__box {
+    margin: 1rem auto;
+  }
+
+  .engineering__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem auto;
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-device-width: 320px) {
+  header nav .navbar-collapse .navbar-nav {
+    background-color: #fff;
+  }
+
+  header nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: black;
+    font-size: 2rem;
+  }
+
+  .section_one {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .text-area>.main-text {
+    padding: 3rem 1rem;
+  }
+
+  .donate {
+    /* display: block; */
+    color: rgb(133, 128, 128);
+    font-size: 2rem;
+    text-align: center;
+    background: #450000;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /*----------------- agriculture page ------------------- */
+  .agriculture>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .agriculture__text>p {
+    font-size: 2rem;
+    color: rgba(51, 51, 51, 0.942);
+    font-weight: 500;
+    padding: 2rem auto;
+  }
+
+  /*------------------crypto currencies---------------------------- */
+
+  .blockchain>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .engineering>p {
+    font-size: 2.8rem;
+    padding: 2rem auto;
+  }
+
+  .engineering__box {
+    margin: 1rem auto;
+  }
+
+  .engineering__box>p {
+    font-size: 2rem;
+    color: #334;
+    padding: 1rem auto;
+    margin-bottom: 5rem;
+  }
+}
