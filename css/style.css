@@ -285,6 +285,9 @@ header .donate {
 
 
 /*---------------- cta--------------------------*/
+.cta {
+  margin-bottom: 10rem;
+}
 
 .cta-quotes {
   margin: 5rem auto;
@@ -336,46 +339,49 @@ cite {
   margin: 2rem auto;
 }
 
-.cta-contact__form--title {
+.cta__form {
+  margin: 4rem auto;
+  margin-bottom: 5rem;
+}
+
+.cta__form--title {
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  margin: 2rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+
 }
 
-.cta-contact__form>form {
-
+.cta-contact__form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem auto;
-  width: 100%;
-
+  margin: .5rem 10%;
 
 }
 
-.cta-contact__form>form>input {
 
-  margin: .5rem;
-  border: 2px solid #333;
-  padding: 1rem auto;
-  padding: 1rem 30rem;
+.cta-contact__form input,
+.cta-contact__form textarea {
+  margin: .5rem 0;
+  padding: 1rem 0;
+  border: 2px solid #000;
   font-size: 2rem;
 
 }
 
-.cta-contact__form>form>textarea {
-  border: 2px solid #333;
-  margin-top: 3rem;
-  font-size: 2rem;
-  color: #222;
-  text-align: left;
+.cta-contact__form input[type="submit"] {
+
+  background-color: #213E8C;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 5rem;
+  margin: -3rem auto;
+
 
 }
 
-input {
+
+/* input {
   text-align: left;
   color: #000
 }
@@ -388,7 +394,7 @@ input {
 :-moz-placeholder {
   text-align: left;
   color: #000
-}
+} */
 
 
 /*--------------------- FOOTER ----------------------------*/
