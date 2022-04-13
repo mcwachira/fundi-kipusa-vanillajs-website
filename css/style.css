@@ -551,11 +551,26 @@ footer {
 
 }
 
+/*------------------ all images to mae them sharper --------------------------*/
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 
-.about__image {
-  height: 100vh;
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
 }
 
+.web__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+}
+
+.web__gallery img {
+  width: 100%;
+  height: auto;
+}
 
 .about__statement {
   margin: 1rem auto;
@@ -884,6 +899,10 @@ footer {
 .construction__img--box {
   width: 20%;
   height: auto;
+}
+
+.construction__gallery {
+  margin-top: 2rem;
 }
 
 /*---------------------------------------------------*/
