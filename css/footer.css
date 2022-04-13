@@ -1,0 +1,129 @@
+footer {
+    background-color: #99f1b5;
+    line-height: 1.5;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2.2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.ft-title {
+    color: #333;
+    font-family: "Merriweather", serif;
+    font-size: 2.5rem;
+    padding-bottom: 0.625rem;
+}
+
+/* Footer main */
+.ft-main {
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 29.8125rem
+
+    /* 477px */
+) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 77.5rem
+
+    /* 1240px */
+) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+.ft-main-item {
+    padding: 1.25rem;
+    min-width: 12.5rem;
+}
+
+.ft-main-item p {
+    font-size: 2.2rem;
+    color: #333;
+}
+
+/* Footer main | Newsletter form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+}
+
+/* input[type="email"] {
+  border: 0;
+  padding: 1rem 4rem;
+  margin-top: 0.3125rem;
+} */
+
+/* input[type="submit"] {
+  background-color: #f9e45b;
+  color: #333;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 2rem;
+  margin-top: 0.3125rem;
+} */
+
+/* Footer social */
+.ft-social {
+    padding: 0 1.875rem 1.25rem;
+}
+
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid;
+    padding-top: 1.25rem;
+}
+
+.ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.ft-social>.ft-social-list>a>i {
+    font-size: 4rem;
+}
+
+/* Footer legal */
+.ft-legal {
+    padding: 0.9375rem 1.875rem;
+    font-size: 2.2rem;
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #333;
+}
+
+.ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+}
+
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;
+}
