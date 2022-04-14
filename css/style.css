@@ -1237,7 +1237,7 @@ fieldset {
 }
 
 @media (max-width: 992px) {
-  #map {
+  /* #map {
     margin-top: 7rem;
     height: 100px;
     width: 100%;
@@ -1254,7 +1254,7 @@ fieldset {
     background: none !important;
     height: 400px;
     width: 400px;
-  }
+  } */
 }
 
 .contact__details {
@@ -1284,17 +1284,18 @@ fieldset {
     /* margin-left:20rem; */
   }
 
+  /* 
   .contact__container--map {
     display: none;
-  }
+  } */
 
-  .mapouter {
+  /* .mapouter {
     display: none;
   }
 
   .gmap_canvas {
     display: none;
-  }
+  } */
 
   .section-contact {
     margin-top: 1rem;
