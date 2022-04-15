@@ -117,7 +117,10 @@ header .donate {
 .header__background {
   background-image: url('../images/background/youth.jpg');
   background-size: cover;
+  background-position: center center;
+  background-color: #393E43;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   /* opacity: .8; */
   height: 100vh;
 
@@ -125,10 +128,12 @@ header .donate {
 
 .header_main-text {
   position: absolute;
-  top: 30%;
+  top: 50%;
   transform: translate(20%, -50%);
 
 }
+
+
 
 .header_main-text>span {
   display: flex;
@@ -140,6 +145,92 @@ header .donate {
   background: transparent;
 
 
+}
+
+@media screen and (max-width:1050px) {
+  .header_main-text {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(20%, -50%);
+
+  }
+
+  .header_main-text>span {
+    font-size: 5.0rem;
+
+
+
+  }
+}
+
+@media screen and (max-width:991px) {
+  .header_main-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(20%, -50%);
+
+  }
+
+  .header_main-text>span {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width:870px) {
+
+
+  .header_main-text>span {
+    font-size: 4.0rem;
+  }
+}
+
+@media screen and (max-width:870px) {
+
+
+  .header_main-text>span {
+    font-size: 4.0rem;
+  }
+}
+
+@media screen and (max-width:690px) {
+  .header_main-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(10%, -50%);
+
+  }
+
+  .header_main-text>span {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width:610px) {
+  .header_main-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(10%, -50%);
+
+  }
+
+  .header_main-text>span {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width:565px) {
+  .header_main-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(5%, -50%);
+
+  }
+
+  .header_main-text>span {
+    padding: 1rem 4rem;
+    font-size: 3.2rem;
+  }
 }
 
 /*----------------------------------*/
@@ -190,6 +281,31 @@ header .donate {
   font-weight: bold;
 }
 
+
+@media screen and (max-width:840px) {
+
+  .about {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:600px) {
+
+  .about {
+    grid-template-columns: 1fr;
+
+    grid-gap: 1rem;
+    margin: 1rem auto;
+  }
+
+  .mission,
+  .projects-about,
+  .contact-about {
+    margin: 1rem 5rem;
+    padding: 3rem 5rem;
+  }
+}
+
 /*------------------- what we do -----------------------*/
 
 .what_we_do {
@@ -216,9 +332,6 @@ header .donate {
 }
 
 
-/* .our-work>div>i {
-  text-align: center;
-} */
 
 
 .our-work>div>p {
@@ -230,7 +343,11 @@ header .donate {
   /* text-align: center; */
 }
 
-
+@media screen and (max-width:991px) {
+  .our-work {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /*-------------------------------------------------*/
 
@@ -1047,6 +1164,50 @@ footer {
   text-decoration: none;
   color: #f9f9f9;
 }
+
+@media screen and (max-width:772px) {
+  footer {
+
+    grid-template-columns: repeat(1, 1fr);
+
+
+  }
+
+  .footer__contacts,
+  .footer__mailing--list,
+  .footer__links {
+    margin: 2rem auto;
+
+    color: #f9f9f9;
+
+
+  }
+
+  .footer__links h1 {
+    text-align: center;
+  }
+
+  .footer__links ul {
+    display: flex;
+    /* justify-content: space-between;
+    flex-direction: row; */
+  }
+
+  .footer__links li {
+
+    padding: 1rem 1rem;
+  }
+
+}
+
+@media screen and (max-width:360px) {
+  .footer__links ul {
+    margin-left: -3rem;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 
 /* .cta-submit__button {
   margin: -1rem 0;
