@@ -550,6 +550,50 @@ cite {
   font-size: 2.1rem;
   padding: 2rem 20rem;
 
+
+
+}
+
+@media screen and (max-width:991px) {
+
+
+  .about__section--text {
+    margin: 5rem auto;
+    text-align: center;
+    font-size: 2.1rem;
+    padding: 2rem 10rem;
+
+
+
+  }
+
+}
+
+@media screen and (max-width:800px) {
+
+
+  .about__section--text {
+    margin: 1rem 0;
+    padding: 1rem 5rem;
+  }
+
+}
+
+@media screen and (max-width:450px) {
+  .about__main-text {
+    font-size: 4rem;
+  }
+
+  .about__section--text {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 2rem 2rem;
+
+
+
+  }
+
 }
 
 /*------------------ all images to mae them sharper --------------------------*/
@@ -581,6 +625,17 @@ img {
   font-size: 3rem;
   font-style: italic;
   background-color: #507600;
+}
+
+
+@media screen and (max-width:700px) {
+  .about__statement {
+
+    font-size: 2.3rem;
+
+  }
+
+
 }
 
 .about__mission {
@@ -666,14 +721,36 @@ img {
   grid-gap: 1rem;
 }
 
-/* .about__team--players>h2,
-.about__team--players>p {
-  text-align: center;
-} */
 
-.about__team--players>h2 {
+
+@media screen and (max-width:991px) {
+  .about__team--players {
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+  }
+}
+
+
+@media screen and (max-width:600px) {
+
+  .about__team--players {
+
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+.about__team--players h2 {
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+}
+
+.about__team--players p {
+
+  font-size: 2rem;
 }
 
 /*---------------- Agriculture  page ------------------------*/
