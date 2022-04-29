@@ -12,20 +12,20 @@ body {
 
 
 /*---------------- navbar ------------------*/
-header {}
+/* header {} */
 
 header nav {
   /* z-index: 100; */
-  background: #393E43;
+  /* background: #393E43;
   opacity: .8;
-  height: 80px;
+  height: 80px; */
 }
 
-header a {
+/* header a {
   font-size: 2.2rem;
   text-decoration: none;
   color: #fff;
-}
+} */
 
 /* .navbar-nav {
   margin: 2rem 0;
@@ -34,7 +34,7 @@ header a {
 
 
 /** For mobile devices **/
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .custom-shape-divider-bottom-1630249677 svg {
     width: calc(100% + 1.3px);
     height: 0px;
@@ -72,7 +72,7 @@ header .nav-item {
 
 header .nav-item>a {
   color: #fff;
-}
+} */
 
 /* header .nav-link:active {
   color: #ccb20a;
@@ -80,7 +80,7 @@ header .nav-item>a {
 header .nav-link:hover {
   color: #ccb20a;
 } */
-
+/* 
 header .navbar-brand {
   padding-left: 1rem;
 }
@@ -110,12 +110,198 @@ header .donate {
 
 .link-style {
   color: #fff;
+} */
+
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+header .brand {
+  color: #422222;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: all .6s;
+}
+
+header .btn {
+  display: none;
+  font-size: 30px;
+  color: #000;
+
+}
+
+header.sticky {
+  /* background-color: #0E2973;
+  padding: 20px 100px; */
+  /* height: 85px; */
+}
+
+header {
+  background-color: #181112;
+  opacity: .75;
+  padding: 5px 60px;
+}
+
+header .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu li {
+  list-style: none;
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 30px;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+
+header .menu .dropdown-menu {
+  position: absolute;
+  display: none;
+  border-radius: 1Opx;
+  border: 1px;
+  margin: 2rem 1rem;
+  height: 170px;
+  width: 170px;
+  background-color: #101F46;
+  opacity: none;
+  transition: all 1s;
+}
+
+header .menu .dropdown-menu li {
+  padding: 10px 10px;
+  list-style: none;
+
+}
+
+header .menu .dropdown-menu li:hover {
+
+  background-color: #fff;
+  /* color: #000; */
+
+}
+
+header .menu .dropdown-menu li a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 30px;
+  padding: 0 10px;
+  color: #fff;
+}
+
+header .menu .dropdown-menu li a:hover {
+  background: none;
+  color: #000;
+}
+
+header .menu .dropdown-menu.display {
+  display: block;
+}
+
+header .donate {
+  margin-top: 1.3rem;
+  margin-right: 1rem;
+}
+
+a.donate {
+  text-decoration: none;
+}
+
+a.donate:hover {
+  color: #fff;
+}
+
+.donate {
+  font-size: 2.5rem;
+
+  text-transform: capitalize;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: #507500;
+  padding: 8px 30px;
+  margin: 0 10rem;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.donate:hover {
+  background-color: #9F3739;
+}
+
+@media screen and (max-width:991px) {
+  header .btn {
+    display: block;
+  }
+
+  header .menu {
+    position: fixed;
+    background-color: blue;
+    min-width: 400px;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    padding: 80px 50px;
+    transition: .6s;
+    transform-origin: right;
+  }
+
+  header .menu ul {
+    flex-direction: column;
+  }
+
+  .menu.act {
+    right: 0;
+  }
+
+  header .menu .close-btn {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+
+  header .menu .dropdown-menu {
+    top: 250px;
+    margin: 0 1rem;
+
+  }
 }
 
 /*------------- HOME PAGE ----------------*/
 
 .header__background {
-  background-image: url('../images/background/youth.jpg');
+  background-image: url('../images/web-ready-pictures/background.jpg');
   background-size: cover;
   background-position: center center;
   background-color: #393E43;
