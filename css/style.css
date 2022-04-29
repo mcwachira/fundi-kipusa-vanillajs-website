@@ -153,6 +153,13 @@ header {
   padding: 5px 60px;
 }
 
+header .menu {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header .menu ul {
   display: flex;
   justify-content: center;
@@ -242,7 +249,7 @@ a.donate:hover {
   border: none;
   background-color: #507500;
   padding: 8px 30px;
-  margin: 0 10rem;
+  margin: 0 5rem;
   opacity: 1;
   cursor: pointer;
 }
@@ -256,9 +263,14 @@ a.donate:hover {
     display: block;
   }
 
+  .fa-bars {
+    color: #fff;
+  }
+
   header .menu {
     position: fixed;
-    background-color: blue;
+    background-color: #fff;
+    opacity: none;
     min-width: 400px;
     height: 100vh;
     right: -100%;
@@ -266,11 +278,16 @@ a.donate:hover {
     padding: 80px 50px;
     transition: .6s;
     transform-origin: right;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   header .menu ul {
     flex-direction: column;
   }
+
+
 
   .menu.act {
     right: 0;
@@ -286,15 +303,22 @@ a.donate:hover {
 
   header .menu a {
     display: block;
-    font-size: 20px;
+    font-size: 3rem;
     margin: 20px;
     padding: 0 15px;
+    color: #000;
   }
 
   header .menu .dropdown-menu {
     top: 250px;
     margin: 0 1rem;
 
+  }
+
+  header .menu .donate {
+    background-color: #507500;
+    padding: 1rem 5rem;
+    color: #fff
   }
 }
 
