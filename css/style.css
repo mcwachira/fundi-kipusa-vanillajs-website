@@ -400,6 +400,9 @@ a.donate:hover {
   color: rgba(236, 235, 235, 0.98)
 }
 
+.home-icons {
+  width: 50%;
+}
 
 @media screen and (max-width:840px) {
 
