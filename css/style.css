@@ -12,105 +12,7 @@ body {
 
 
 /*---------------- navbar ------------------*/
-/* header {} */
 
-header nav {
-  /* z-index: 100; */
-  /* background: #393E43;
-  opacity: .8;
-  height: 80px; */
-}
-
-/* header a {
-  font-size: 2.2rem;
-  text-decoration: none;
-  color: #fff;
-} */
-
-/* .navbar-nav {
-  margin: 2rem 0;
-} */
-
-
-
-/** For mobile devices **/
-/* @media (max-width: 767px) {
-  .custom-shape-divider-bottom-1630249677 svg {
-    width: calc(100% + 1.3px);
-    height: 0px;
-  }
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: #fff;
-  min-width: 16rem;
-  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 1.2rem 1.6rem;
-  text-decoration: none;
-  display: block;
-  font-size: 2rem;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-header .nav-item {
-  padding: 1.5rem;
-}
-
-header .nav-item>a {
-  color: #fff;
-} */
-
-/* header .nav-link:active {
-  color: #ccb20a;
-}
-header .nav-link:hover {
-  color: #ccb20a;
-} */
-/* 
-header .navbar-brand {
-  padding-left: 1rem;
-}
-
-header .donate {
-  margin-top: 1.3rem;
-  margin-right: 3rem;
-}
-
-.donate {
-  font-size: 2.5rem;
-  text-transform: capitalize;
-  background-color: transparent;
-  color: #fff;
-  outline: none;
-  border: none;
-  background-color: #507600;
-  padding: 10px 44px;
-  margin: 0 6rem;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.donate:hover {
-  background-color: #9E1039;
-}
-
-.link-style {
-  color: #fff;
-} */
 
 header {
   z-index: 999;
@@ -126,7 +28,7 @@ header {
 
 header .brand {
   color: #422222;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -174,7 +76,7 @@ header .menu li {
 .nav-link {
   text-decoration: none;
   font-weight: 500;
-  margin: 0 30px;
+  margin: 0 15px;
   padding: 0 10px;
   color: #fff;
   font-size: 2rem;
@@ -466,6 +368,7 @@ a.donate:hover {
   align-items: center;
   font-size: 1.7rem;
   padding: 4rem 1rem;
+
 }
 
 .mission>h2,
@@ -477,18 +380,24 @@ a.donate:hover {
 
 .mission {
   background-color: #507600;
+  font-size: 2rem;
+
 }
 
 .projects-about {
 
   background-color: #4682B4;
+
+
 }
 
 .contact-about {
 
-  background-color: #FFE54E;
+  background-color: #eac90e;
+  opacity: 1.9;
   font-size: 2rem;
-  font-weight: bold;
+
+  color: rgba(236, 235, 235, 0.98)
 }
 
 
@@ -579,7 +488,8 @@ a.donate:hover {
 .about__foundation--text_h2 {
   text-align: center;
   font-size: 3rem;
-  margin: 3rem;
+  margin: 9rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -740,7 +650,7 @@ cite {
 /*------------------   ABOUT PAGE --------------------------*/
 
 .about__section {
-  margin: 8rem auto;
+  margin: 11rem auto;
   background-color: #4682B4;
 
 }
@@ -1337,6 +1247,10 @@ img {
 }
 
 
+.project-icons {
+  width: 30%;
+  margin-bottom: 1rem;
+}
 
 /*--------------------- FOOTER ----------------------------*/
 footer {
