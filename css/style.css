@@ -782,7 +782,7 @@ cite {
   .about__section--text {
     margin: 5rem auto;
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     padding: 2rem 10rem;
 
 
@@ -809,7 +809,7 @@ cite {
   .about__section--text {
     margin: 1rem 0;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 5.7rem;
     padding: 2rem 2rem;
 
 
@@ -876,17 +876,6 @@ img {
 }
 
 
-/* .web__gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: masonry;
-}
-
-.web__gallery img {
-  width: 100%;
-  height: auto;
-} */
-
 .about__statement {
   margin: 1rem auto;
   padding: 4rem 0;
@@ -901,7 +890,8 @@ img {
 @media screen and (max-width:700px) {
   .about__statement {
 
-    font-size: 2.3rem;
+    font-size: 3.3rem;
+    margin: 1rem auto;
 
   }
 
@@ -912,7 +902,10 @@ img {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
 }
+
+
 
 .about__mission--text {
 
@@ -994,6 +987,39 @@ img {
 
 
 @media screen and (max-width:991px) {
+  .about__mission {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+
+  }
+
+  .about__mission--text_h2 {
+    font-size: 4rem;
+
+  }
+
+  .about__mission--text_paragraph {
+    font-size: 3.0rem;
+
+  }
+
+  .about__mission--image-responsive {
+    display: flex;
+    margin: 1rem auto;
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+
+  .about__mission--statement>p {
+    font-size: 4rem;
+  }
+
+  .about__mission--statement button {
+    padding: 2rem 5rem;
+    font-size: 3rem;
+  }
+
   .about__team--players {
 
     grid-template-columns: repeat(2, 1fr);
