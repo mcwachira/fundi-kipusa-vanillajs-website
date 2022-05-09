@@ -234,14 +234,15 @@ a.donate:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* opacity: .8; */
-  height: 100vh;
+  height: 90vh;
 
 }
 
 .header_main-text {
   position: absolute;
   top: 50%;
-  transform: translate(20%, -50%);
+  transform: translate(10%, -50%);
+
 
 }
 
@@ -368,6 +369,7 @@ a.donate:hover {
   align-items: center;
   font-size: 1.7rem;
   padding: 4rem 1rem;
+  text-align: center;
 
 }
 
@@ -376,17 +378,19 @@ a.donate:hover {
 .contact-about>h2 {
   font-size: 3.2rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .mission {
   background-color: #507600;
-  font-size: 2rem;
+  font-size: 18px;
 
 }
 
 .projects-about {
 
   background-color: #4682B4;
+  font-size: 18px;
 
 
 }
@@ -395,13 +399,14 @@ a.donate:hover {
 
   background-color: #eac90e;
   opacity: 1.9;
-  font-size: 2rem;
+  font-size: 18px;
 
   color: rgba(236, 235, 235, 0.98)
 }
 
 .home-icons {
   width: 50%;
+
 }
 
 @media screen and (max-width:840px) {
@@ -448,9 +453,11 @@ a.donate:hover {
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2rem;
+  /* grid-gap: 2rem; */
   margin: 7rem auto;
+  align-content: center;
   justify-content: center;
+  margin: 0.5 auto;
 }
 
 
@@ -1476,7 +1483,10 @@ footer {
 .contact__us {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 3rem 25rem;
+
+  width: 100%;
+  justify-content: center;
+  /* margin: 1rem auto */
 
 }
 
@@ -1487,43 +1497,37 @@ footer {
   margin-bottom: 1rem;
 }
 
-.contact__us--from__paragraph {
-  font-size: 2rem;
-}
-
-.contact__us--details {
 
 
-  font-size: 2rem;
-}
-
-.contact__us--image {
-  width: 100%;
-  height: 450px
-}
-
-/* .section-contact {
- 
-  margin-top: 5rem;
-}
-
-
-*/
-
-.form {
+.contact__us .form {
   line-height: 30px;
   color: #000;
-
   box-sizing: border-box;
 }
 
 .form__container {
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   margin: 0 auto;
   position: relative;
   background-color: #fff;
+  margin-left: 20rem;
 }
+
+.contact__image-container {
+  width: 100%;
+
+}
+
+.contact__us--image {
+  width: 80%;
+  height: 463px;
+
+}
+
+
+
+
 
 #contact input[type="text"],
 #contact input[type="email"],
@@ -1584,16 +1588,7 @@ fieldset {
   padding: 1rem;
 }
 
-/* #contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-} */
+
 
 #contact textarea {
   height: 100px;

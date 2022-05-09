@@ -86,54 +86,41 @@
 
 
   <section class="contact__us">
-    <!-- <h1 class="contact__us--from__heading">
-  Contact Us
-</h1>
-<p class="contact__us--from__paragraph">
-  Mtwapa creek Mtwapa, Kilifi, Kenya
-</p>
-<div class="contact__us--details">
-  <span>
-    contact@fundikipusa.co.ke
-  </span>
 
-  <span>
-    +254 (0) 713956590
-  </span>
-</div> -->
+    <div class="form__container">
+      <form id="contact" action="mail/contact_me.php" method="post">
+        <h3> Contact Form</h3>
 
+        <fieldset>
+          <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Email Address" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+        </fieldset>
 
-
-    <section class="form">
-      <div class="form__container">
-        <form id="contact" action="mail/contact_me.php" method="post">
-          <h3> Contact Form</h3>
-
-          <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Your Email Address" type="email" tabindex="2" required>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-          </fieldset>
-
-          <fieldset>
-            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-          </fieldset>
-          <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
-          </fieldset>
-        </form>
-      </div>
-    </section>
+        <fieldset>
+          <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
+        </fieldset>
+      </form>
+    </div>
 
 
-    <div>
+    <div class="contact__image-container">
       <img class="contact__us--image" src="images/web-ready-pictures//kids.jpg" alt=" contact us">
     </div>
+
+
+
   </section>
+
+
+
 
 
 
