@@ -1670,7 +1670,8 @@ fieldset {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin-left: 1rem;
+    margin: 1rem auto;
+    width: 100%;
   }
 
   .contact__container--details {
