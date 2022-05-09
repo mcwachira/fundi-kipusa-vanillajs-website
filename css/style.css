@@ -405,6 +405,37 @@ a.donate:hover {
 }
 
 
+@media screen and (max-width:991px) {
+
+  .about {
+    grid-template-columns: 1fr;
+
+  }
+
+  .mission,
+  .projects-about,
+  .contact-about {
+    display: flex;
+    margin: 4rem auto;
+    align-items: center;
+    width: 70%;
+  }
+
+  .mission>h2,
+  .projects-about>h2,
+  .contact-about>h2 {
+    font-size: 4rem;
+    margin: 3rem auto;
+
+  }
+
+  .mission>p,
+  .projects-about>p,
+  .contact-about>p {
+    font-size: 3rem;
+  }
+
+}
 
 @media screen and (max-width:840px) {
 
@@ -459,7 +490,7 @@ a.donate:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   /* grid-gap: 2rem; */
-  margin: 7rem auto;
+  /* margin: 7rem auto; */
   align-content: center;
   justify-content: center;
   margin: 0.5 auto;
@@ -720,27 +751,6 @@ cite {
 }
 
 
-/* input {
-  text-align: left;
-  color: #000
-}
-
-::-webkit-input-placeholder {
-  text-align: left;
-  color: #000
-}
-
-:-moz-placeholder {
-  text-align: left;
-  color: #000
-} */
-
-
-
-/* .about__nav {
-  background-color: #99f1b5;
-  height: 20vh;
-} */
 
 .affix {
   padding: 0;
@@ -780,11 +790,8 @@ cite {
 
 
   .about__section--text {
-    margin: 5rem auto;
-    text-align: center;
-    font-size: 2.5rem;
-    padding: 2rem 10rem;
 
+    font-size: 3.5rem;
 
 
   }
@@ -1166,6 +1173,8 @@ img {
 .agriculture__gallery--img {
   width: 100%;
 }
+
+@media screen and (max-width:991px) {}
 
 /*---------------- Engineering page ------------------------*/
 .engineering {
@@ -2785,4 +2794,5 @@ fieldset {
     padding: 1rem auto;
     margin-bottom: 5rem;
   }
+}
 }
