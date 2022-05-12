@@ -23,7 +23,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 100px;
+  padding: 10px 60px;
+  background-color: #181112;
+  opacity: .75;
+
 }
 
 .navbar-brand {
@@ -49,11 +52,7 @@ header.sticky {
   /* height: 85px; */
 }
 
-header {
-  background-color: #181112;
-  opacity: .75;
-  padding: 5px 60px;
-}
+
 
 header .menu {
   width: 80%;
@@ -161,6 +160,17 @@ a.donate:hover {
 }
 
 @media screen and (max-width:991px) {
+
+
+  header .menu {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    margin-left: -5rem;
+
+  }
+
   header .btn {
     display: block;
   }
@@ -235,6 +245,7 @@ a.donate:hover {
   background-attachment: fixed;
   /* opacity: .8; */
   height: 90vh;
+  width: 100%;
 
 }
 
@@ -275,6 +286,10 @@ a.donate:hover {
 }
 
 @media screen and (max-width:1400px) {
+  .header__background {
+    width: 100%;
+  }
+
   .header_main-text {
     position: absolute;
     top: 50%;
@@ -286,7 +301,14 @@ a.donate:hover {
 
 }
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width:1200px) {
+
+  .header__background {
+    width: 100%;
+
+
+  }
+
   .header_main-text {
     font-size: 3rem;
     position: absolute;
@@ -501,6 +523,16 @@ a.donate:hover {
 @media screen and (max-width:768px) {
   .about {
     width: 100%;
+
+  }
+
+  .mission,
+  .projects-about,
+  .contact-about {
+    width: 90%;
+    margin: 1rem auto;
+    align-content: center;
+    justify-content: center;
 
   }
 
@@ -727,13 +759,13 @@ a.donate:hover {
 
 
   .about__foundation--text_h2 {
-    font-size: 3.4rem;
+    font-size: 4rem;
 
   }
 
   .about__foundation--text_paragraph {
 
-    font-size: 2.3rem;
+    font-size: 2.7rem;
 
   }
 
@@ -913,14 +945,14 @@ cite {
 
 @media screen and (max-width:450px) {
   .about__main-text {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .about__section--text {
     margin: 1rem 0;
     text-align: center;
-    font-size: 5.7rem;
-    padding: 2rem 2rem;
+    font-size: 3.7rem;
+    padding: 2rem 1rem;
 
 
 
@@ -1141,6 +1173,7 @@ img {
 
   }
 }
+
 
 
 @media screen and (max-width:600px) {
@@ -1729,6 +1762,106 @@ footer {
   color: #f9f9f9;
 }
 
+
+@media screen and (max-width:991px) {
+
+  .footer__contacts,
+  .footer__mailing--list,
+  .footer__links {
+    width: 100%;
+    margin: 2rem auto;
+    font-size: 3rem;
+    color: #f9f9f9;
+    text-align: center;
+  }
+
+  .footer__contacts h1,
+  .footer__mailing--list h1,
+  .footer__links h1 {
+
+
+    margin: 2rem auto;
+    font-size: 3rem;
+  }
+
+
+  .footer__contacts h2 {
+    font-size: 3rem;
+  }
+
+
+  .footer__contacts--span {
+    font-size: 2.8rem;
+  }
+
+
+  .footer__contacts-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__contacts-social img {
+
+    width: 80px;
+    margin: 2rem 3rem;
+
+
+  }
+
+
+
+  .footer__contact--logo {
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  .footer__contact--logo img {
+    width: 200px;
+  }
+
+  .footer__mailing--list>p {
+    font-size: 3rem;
+  }
+
+
+
+  .footer__mailing--list input {
+
+    font-size: 2.8rem;
+
+  }
+
+
+  .footer__links h1 {
+    text-align: right;
+    font-size: 3.5rem;
+  }
+
+  .footer__links ul {
+    list-style: none;
+    font-size: 2.5rem;
+
+  }
+
+  .footer__links li {
+    margin: 1rem 0;
+  }
+
+  .footer__links a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 3rem;
+  }
+
+}
+
 @media screen and (max-width:772px) {
   footer {
 
@@ -1737,15 +1870,7 @@ footer {
 
   }
 
-  .footer__contacts,
-  .footer__mailing--list,
-  .footer__links {
-    margin: 2rem auto;
 
-    color: #f9f9f9;
-
-
-  }
 
   .footer__links h1 {
     text-align: center;
@@ -2060,47 +2185,7 @@ fieldset {
 
 /*------------------ media queries -----------------------*/
 @media only screen and (max-device-width: 768px) {
-  header nav .navbar-collapse .navbar-nav {
-    background-color: #fff;
-  }
 
-  header nav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    color: black;
-    font-size: 2rem;
-  }
-
-  .section_one {
-    width: 100%;
-    margin: 3rem auto;
-  }
-
-  .text-area>.main-text {
-    margin: 1rem 1rem;
-    padding: 3rem 1rem;
-    width: 100%;
-  }
-
-  .home__svg {
-    height: auto;
-    /* margin-bottom: 10rem; */
-  }
-
-  .donate {
-    /* display: block; */
-    color: rgb(133, 128, 128);
-    font-size: 2rem;
-    text-align: center;
-    background: #450000;
-    text-decoration: none;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .our-team {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
 
   /*----------------- agriculture page ------------------- */
   .agriculture>p {
@@ -2144,14 +2229,7 @@ fieldset {
 @media only screen and (max-device-width: 425px) {
   /*------------- HOME PAGE ----------------*/
 
-  .fundikipusa-logo {
-    width: 50%;
-  }
 
-  section_one {
-    width: 100%;
-    margin: 5rem auto;
-  }
 
   .text-area-heading {
     color: #fff;
@@ -2868,16 +2946,7 @@ fieldset {
     padding: 3rem 1rem;
   }
 
-  .donate {
-    /* display: block; */
-    color: rgb(133, 128, 128);
-    font-size: 2rem;
-    text-align: center;
-    background: #450000;
-    text-decoration: none;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-  }
+
 
   /*----------------- agriculture page ------------------- */
   .agriculture>p {
@@ -2917,34 +2986,13 @@ fieldset {
 }
 
 @media only screen and (max-device-width: 320px) {
-  header nav .navbar-collapse .navbar-nav {
-    background-color: #fff;
-  }
 
-  header nav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    color: black;
-    font-size: 2rem;
-  }
-
-  .section_one {
-    width: 100%;
-    margin: 2rem auto;
-  }
 
   .text-area>.main-text {
     padding: 3rem 1rem;
   }
 
-  .donate {
-    /* display: block; */
-    color: rgb(133, 128, 128);
-    font-size: 2rem;
-    text-align: center;
-    background: #450000;
-    text-decoration: none;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-  }
+
 
   /*----------------- agriculture page ------------------- */
   .agriculture>p {
