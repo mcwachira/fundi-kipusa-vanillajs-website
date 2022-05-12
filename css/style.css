@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -26,13 +26,13 @@ header {
   padding: 20px 100px;
 }
 
-header .brand {
-  color: #422222;
-  font-size: 20px;
-  font-weight: 700;
+.navbar-brand {
+  color: #fff;
+  font-size: 2.1rem;
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   transition: all .6s;
 }
 
@@ -79,7 +79,7 @@ header .menu li {
   margin: 0 15px;
   padding: 0 10px;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 
@@ -241,7 +241,7 @@ a.donate:hover {
 .header_main-text {
   position: absolute;
   top: 50%;
-  transform: translate(10%, -50%);
+  transform: translate(12%, -50%);
 
 
 }
@@ -360,16 +360,21 @@ a.donate:hover {
   color: #FFF5E2;
 }
 
+.about .mission__link {
+  text-decoration: none;
+}
 
 .mission,
 .projects-about,
 .contact-about {
+
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.7rem;
   padding: 4rem 1rem;
   text-align: center;
+
 
 }
 
@@ -381,9 +386,26 @@ a.donate:hover {
   margin-bottom: 1rem;
 }
 
+
+.mission>p,
+.projects-about>p,
+.contact-about>p {
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+}
+
+
+.mission>.project-text,
+.projects-about>.project-text,
+.contact-about>.project-text {
+  padding: 1rem 4rem;
+}
+
 .mission {
   background-color: #507600;
   font-size: 18px;
+  color: #fff;
 
 }
 
@@ -391,6 +413,7 @@ a.donate:hover {
 
   background-color: #4682B4;
   font-size: 18px;
+  color: #fff;
 
 
 }
@@ -401,7 +424,7 @@ a.donate:hover {
   opacity: 1.9;
   font-size: 18px;
 
-  color: rgba(236, 235, 235, 0.98)
+  color: #fff;
 }
 
 
@@ -472,7 +495,7 @@ a.donate:hover {
 /*------------------- what we do -----------------------*/
 
 .what_we_do {
-  background-color: #FAFAFA;
+  background-color: #FFF;
 
 }
 
@@ -512,6 +535,7 @@ a.donate:hover {
   color: #334;
   padding: 1rem auto;
   margin-bottom: 5rem;
+  text-transform: capitalize;
   /* text-align: center; */
 }
 
@@ -561,21 +585,28 @@ a.donate:hover {
 .about__foundation {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: 500px 750px;
+
 }
 
 .about__foundation--text {
   background-color: #4682B4;
   color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
 .about__foundation--text_h2 {
   text-align: center;
   font-size: 3rem;
-  margin: 9rem;
+
   margin-top: 1rem;
-  margin-bottom: 1rem;
+
 }
 
 .about__foundation--image-responsive {
@@ -585,15 +616,16 @@ a.donate:hover {
 }
 
 .about__foundation--text_paragraph {
-  padding: 1rem 10rem;
+  padding: 1rem 6rem;
   font-size: 1.8rem;
   margin: 1rem auto;
   text-align: center;
+  margin-bottom: 1rem;
 
 }
 
 .about__foundation--text_paragraph:last-child {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .about__foundation--text_button {
@@ -603,6 +635,7 @@ a.donate:hover {
   color: #ffffff;
   font-size: 1.8rem;
   padding: 1rem 3rem;
+  margin: 3rem;
 }
 
 @media screen and (max-width:1105px) {
@@ -681,21 +714,24 @@ a.donate:hover {
 .cta-quote:after {
   position: absolute;
   color: #333;
-  font-size: 7rem;
-  width: 4rem;
+  font-size: 8rem;
+  width: 8rem;
   height: 4rem;
 }
 
 .cta-quote:before {
   content: "“";
 
-  top: -3rem;
+  top: -2rem;
+  left: 1rem;
+  width: 40rem;
 }
 
 .cta-quote:after {
   content: "”";
+  top: 2rem;
+  width: 1rem;
 
-  bottom: .5rem;
 }
 
 cite {
@@ -882,6 +918,10 @@ img {
   grid-row: span 2;
 }
 
+.grid-wrapper .big-tall {
+  grid-column: span 2;
+  grid-row: span 3;
+}
 
 .about__statement {
   margin: 1rem auto;
