@@ -1155,22 +1155,27 @@ cite {
 
 @media screen and (max-width:991px) {
 
-
-  .about__section--text {
-
+  .about__section {
+    margin: 9rem auto;
+    background-color: #4682B4;
     width: 100%;
 
   }
 
-  .about__section--text {
+  .about__main-text {
+    padding: 8rem 3rem;
+    font-size: 4rem;
+  }
 
-    font-size: 3.5rem;
+  .about__section--text {
+    font-size: 1.8rem;
     margin: 1rem 0;
     padding: 1rem 3rem;
     width: 100%;
 
-
   }
+
+
 
 }
 
@@ -1186,15 +1191,26 @@ cite {
 }
 
 @media screen and (max-width:450px) {
+  .about__section {
+    margin: 1rem auto;
+    background-color: #4682B4;
+    width: 100%;
+    margin: 2rem 0;
+
+  }
+
   .about__main-text {
-    font-size: 3.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 2.0rem;
   }
 
   .about__section--text {
     margin: 1rem 0;
     text-align: center;
-    font-size: 3.7rem;
+    font-size: 1.5rem;
     padding: 2rem 1rem;
+    width: 100%;
 
 
 
@@ -1275,13 +1291,25 @@ img {
 }
 
 
+@media screen and (max-width:991px) {
+
+  .about__statement {
+
+    font-size: 2.2rem;
+
+  }
+
+
+}
+
 @media screen and (max-width:700px) {
   .about__statement {
 
-    font-size: 3.3rem;
+    font-size: 2rem;
     margin: 1rem auto;
 
   }
+
 
 
 }
@@ -1383,34 +1411,40 @@ img {
   }
 
   .about__mission--text_h2 {
-    font-size: 4rem;
+    font-size: 3rem;
 
   }
 
   .about__mission--text_paragraph {
-    font-size: 3.0rem;
+    font-size: 2.2rem;
 
+  }
+
+
+  .about__mission--image {
+    width: 100%;
+    display: flex;
   }
 
   .about__mission--image-responsive {
-    display: flex;
     margin: 1rem auto;
-    width: 80%;
-    margin-bottom: 5rem;
+    width: 70%;
+    height: auto;
+    object-fit: cover;
   }
 
   .about__mission--statement>p {
-    font-size: 4rem;
+    font-size: 2.2rem;
   }
 
   .about__mission--statement button {
-    padding: 2rem 5rem;
-    font-size: 3rem;
+    padding: 2rem 3rem;
+    font-size: 2rem;
   }
 
   .about__team--players {
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     justify-items: center;
 
   }
@@ -1419,6 +1453,7 @@ img {
 
 
 @media screen and (max-width:600px) {
+
 
   .about__team--players {
 
@@ -1437,6 +1472,20 @@ img {
 
   font-size: 2rem;
 }
+
+
+@media screen and(max-width:490px) {
+
+  .about__mission--image-responsive {
+    width: 100%;
+
+  }
+
+
+}
+
+
+
 
 /*---------------- Agriculture  page ------------------------*/
 
@@ -2714,7 +2763,7 @@ fieldset {
   /*------------------   ABOUT PAGE --------------------------*/
 
   .about__section {
-    margin: 1rem 1rem;
+    margin: 10rem 0;
     width: 100%;
   }
 
