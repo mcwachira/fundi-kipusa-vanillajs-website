@@ -639,6 +639,7 @@ a.donate:hover {
 /*------------------- what we do -----------------------*/
 
 .what_we_do {
+  margin: 3rem auto;
   background-color: #FFF;
 
 }
@@ -809,7 +810,7 @@ a.donate:hover {
 }
 
 .about__foundation--text_paragraph:last-child {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .about__foundation--text_button {
