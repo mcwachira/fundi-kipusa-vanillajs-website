@@ -235,10 +235,23 @@ a.donate:hover {
   }
 
   header .menu .dropdown-menu {
-    top: 250px;
+    margin-top: 2rem;
+    ;
+    float: none;
+    position: static;
+    background-color: #fff;
+    color: #000;
     width: 100%;
-    /* margin: 0 1rem; */
+    text-align: center;
 
+
+
+  }
+
+
+  header .menu .dropdown-menu li a {
+    color: #000;
+    font-size: 3rem;
   }
 
   header .menu .donate {
@@ -1232,9 +1245,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: .5rem auto;
 }
 
 .grid-wrapper>div>img {
+
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1298,6 +1313,12 @@ img {
     font-size: 2.2rem;
 
   }
+
+  /* .grid-wrapper>div>img {
+    width: 80%;
+
+
+  } */
 
 
 }
