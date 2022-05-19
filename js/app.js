@@ -31,14 +31,46 @@ dropDown.addEventListener('click', () => {
 })
 
 
-var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
-for (; i < all.length; i++) {
-  rect = all[i].getBoundingClientRect();
-  if (rect.right > docWidth || rect.left < 0) {
-    console.log(all[i]);
-    all[i].style.borderTop = '1px solid red';
-  }
-}
+
+//submenu
+
+// const items = document.querySelectorAll('.item')
+
+// function toggleSubMenu() {
+//   if (this.classList.contains('submenu-active')) {
+//     this.classList.remove('submenu-active');
+//   } else {
+//     if (menu.querySelector(".submenu.active")) {
+//       menu.querySelector(".submenu-active").classList.remove("submenu-active")
+//       this.classList.add('submenu-active')
+//     } else {
+//       this.classList.add('submenu-active')
+//     }
+
+//   }
+// }
+
+// // Event listeners
+
+// for (let item of items) {
+//   if (item.querySelector(".submenu")) {
+//     item.addEventListener('click', toggleSubMenu, false);
+//     item.addEventListener('keypress', toggleSubMenu, false)
+//   }
+// }
+
+
+
+
+
+// var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
+// for (; i < all.length; i++) {
+//   rect = all[i].getBoundingClientRect();
+//   if (rect.right > docWidth || rect.left < 0) {
+//     console.log(all[i]);
+//     all[i].style.borderTop = '1px solid red';
+//   }
+// }
 
 
 
