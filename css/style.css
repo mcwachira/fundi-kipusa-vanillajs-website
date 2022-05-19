@@ -250,31 +250,20 @@ a.donate:hover {
 
   }
 
-  /* 
-    background-color: blue;
-    display: block;
-    color: #000;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    margin: 1rem auto; */
 
 
-}
+  header .menu .dropdown-menu li a {
+    font-size: 2.5rem;
+    margin: 0 0;
+    color: #fff;
+    width: 50%;
+  }
 
-
-header .menu .dropdown-menu li a {
-  font-size: 2.5rem;
-  margin: 0 0;
-  color: #fff;
-  width: 50%;
-}
-
-header .menu .donate {
-  background-color: #507500;
-  color: #fff
-    /* padding: 1rem 5rem; */
-}
+  header .menu .donate {
+    background-color: #507500;
+    color: #fff
+      /* padding: 1rem 5rem; */
+  }
 }
 
 /*------------- HOME PAGE ----------------*/
