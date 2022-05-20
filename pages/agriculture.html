@@ -234,12 +234,13 @@
     <h1 class="cta__form--title">
       CONTACT US
     </h1>
-    <form class="cta-contact__form">
+    <form class="cta-contact__form" method="post" action="https://formsubmit.co/hasieradefa@gmail.com">
 
-      <input type="text" name="first-name" placeholder="Name" class="cta-contact__form--input" required
+      <input type=" text" name="first-name" placeholder="Name" class="cta-contact__form--input" required
         class="feedback-input">
+      <input type="text" name="_honey" style="display:none">
 
-      <input type="email" placeholder="Enter your Email" class="cta-contact__form--input" required
+      <input type="email" name="email" placeholder="Enter your Email" class="cta-contact__form--input" required
         class="feedback-input">
 
       <input type="text" placeholder="Subject" name="subject" class="cta-contact__form--input" required
@@ -247,9 +248,10 @@
 
 
 
-      <textarea name="textarea" id="" cols="80" rows="5" placeholder=" Type your message here..."
+      <textarea name="textarea" cols="80" rows="5" id="body" placeholder=" Type your message here..."
         class="feedback-input"></textarea>
 
+      <input type="hidden" name="_next" value="https://www.fundikipusa.co.ke/thanks.html">
       <input type="submit" value='submit' class="cta-submit__button">
     </form>
   </div>
@@ -296,8 +298,10 @@
 
       <h1>Stay Updated</h1>
       <p>Subscribe to our newsletter to get our latest news.</p>
-      <form>
+      <form action="https://formsubmit.co/hasieradefa@gmail.com" method="post">
+        <input type="text" name="_honey" style="display:none">
         <input type="email" name="email" placeholder="Enter email address" class="footer__mailing--list_email" required>
+        <input type="hidden" name="_next" value="https://www.fundikipusa.co.ke/thanks.html">
         <input type="submit" value="Subscribe" class="footer__mailing--list_submit">
       </form>
     </div>

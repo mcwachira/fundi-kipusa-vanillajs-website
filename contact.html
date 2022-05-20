@@ -94,23 +94,26 @@
 
 
     <div class="form__container">
-      <form id="contact" action="mail/contact_me.php" method="post">
+      <form id="contact" action="https://formsubmit.co/hasieradefa@gmail.com" method="post">
         <h3> Contact Form</h3>
 
         <fieldset>
-          <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          <input placeholder="Your name" name="name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <input type="text" name="_honey" style="display:none">
+        <fieldset>
+          <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required>
         </fieldset>
         <fieldset>
-          <input placeholder="Your Email Address" type="email" tabindex="2" required>
-        </fieldset>
-        <fieldset>
-          <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+          <input placeholder="Your Phone Number (optional)" name="phone number" type="tel" tabindex="3" required>
         </fieldset>
 
         <fieldset>
-          <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+          <textarea placeholder="Type your message here...." tabindex="5" name="textarea" required></textarea>
         </fieldset>
         <fieldset>
+          <input type="hidden" name="_next" value="https://www.fundikipusa.co.ke/thanks.html">
+
           <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
         </fieldset>
       </form>
@@ -183,8 +186,10 @@
 
       <h1>Stay Updated</h1>
       <p>Subscribe to our newsletter to get our latest news.</p>
-      <form>
+      <form action="https://formsubmit.co/hasieradefa@gmail.com" method="post">
+        <input type="text" name="_honey" style="display:none">
         <input type="email" name="email" placeholder="Enter email address" class="footer__mailing--list_email" required>
+        <input type="hidden" name="_next" value="https://www.fundikipusa.co.ke/thanks.html">
         <input type="submit" value="Subscribe" class="footer__mailing--list_submit">
       </form>
     </div>

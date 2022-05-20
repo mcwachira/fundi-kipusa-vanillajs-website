@@ -32,6 +32,13 @@ dropDown.addEventListener('click', () => {
 
 
 
+const submit = document.querySelector('.cta-submit__button')
+submit.addEventListener("click", () => {
+  let link = 'mailto:mcwachira@outlook.com'
+    + "&subject =" + escape("this is my subject")
+    + "&body=" + escape(document.getElementById('body').value)
+  window.location.href = link;
+})
 //submenu
 
 // const items = document.querySelectorAll('.item')
