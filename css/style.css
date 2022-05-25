@@ -281,16 +281,21 @@ a.donate:hover {
   /* opacity: .8; */
   height: 90vh;
   max-width: 100%;
-  width: 100vh;
+  width: 100%;
   overflow-x: hidden;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width:1760px) {
   .header_main-text {
     position: absolute;
     top: 50%;
-    transform: translate(70%, -50%);
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 
   }
 }
@@ -477,7 +482,7 @@ a.donate:hover {
 .mission>h2,
 .projects-about>h2,
 .contact-about>h2 {
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -650,7 +655,7 @@ a.donate:hover {
 }
 
 .what_we_do--main-text {
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   text-transform: capitalize;
   margin: 5rem auto;
   color: #422;
