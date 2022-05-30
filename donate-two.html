@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundi Kipusa</title>
+    <link rel="shotcut icon" type="image/jpg" href="images/favicon/favicon-32x32.png">
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/font/flaticon.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/donate.css">
+    <link rel="stylesheet" type="text/css" href="css/donatetwo.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+    <header>
+
+
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo/happyfish-sms.webp" alt="logo">
+            <span> FUNDI KIPUSA</span>
+        </a>
+        <div class="menu">
+            <div class="btn close-btn">
+                <i class="fas  fa-times "></i>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#" class="nav-link"> Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="nav-link"> About </a>
+                </li>
+
+
+
+
+                <li class="dropdown"><a class="nav-link" href="#">Projects </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="pages/agriculture.html">Agriculture</a>
+                        </li>
+
+
+
+                        <li>
+                            <a href="pages/construction.html">Construction</a>
+                        </li>
+
+                        <li>
+                            <a href="pages/engineering.html">Engineering</a>
+                        </li>
+
+                        <li>
+                            <a href="pages/blockchain.html">Blockchain</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="defatoken.html">DeFa-Token</a>
+                </li>
+                <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+
+            </ul>
+            <a href="donate.html" class="donate"> Donate</a>
+        </div>
+
+
+        <div class="btn menu-btn">
+            <i class="fas fa-bars "></i>
+        </div>
+    </header>
+    <section class="donate--page container">
+        <div class="donate__heading">
+            <h2>Please Donate and help make a difference.</h2>
+        </div>
+
+
+        <div class="donate_form">
+            <div class="row">
+                <div class="col-12 nav nav-tabs">
+                    <a href="#monthly" class="btn_styles monthly active">
+                        Monthly
+                    </a>
+                    <a href="#once" class="btn_styles once">
+                        Give Once
+                    </a>
+                </div>
+            </div>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="once" class="donate__form--ones">
+                <!-- Identify your business so that you can collect the payments. -->
+                <input type="hidden" name="business" value="fundikipusa@gmail.com">
+                <!-- Specify a Donate button. -->
+                <input type="hidden" name="cmd" value="_donations">
+                <!-- Specify details about the contribution -->
+                <!-- <input type="hidden" name="item_name" value="Friends of the Park">
+					    <input type="hidden" name="item_number" value="Fall Cleanup Campaign"> -->
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="charset" value="utf-8">
+
+                <div class="row">
+                    <div class="col-12 nav nav-tabs">
+                        <a href="" class="btn_styles donate-box" data-value="75">
+                            $75
+                        </a>
+                        <a href="" class="btn_styles donate-box active" data-value="50">
+                            $50
+                        </a>
+                        <a href="" class="btn_styles donate-box" data-value="25">
+                            $25
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="donate__description">Select or enter an amount to give. Thank you!</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="body">
+
+                            <div class="input">
+                                <input type="number" name="amount" value="50">
+                                <div class="addition">USD</div>
+                            </div>
+                            <div class="donate__info">Fundi Kipusa Cbo Donation</div>
+                            <div class="donate_buttons">
+                                <!-- Display the payment button. -->
+                                <input type="submit" value="Donate Once" alt="Donate Once" class="btn_styles">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="monthly">
+                <!-- Identify your business so that you can bill for payments. -->
+                <input type="hidden" name="business" value="fundikipusa@gmail.com">
+                <!-- Specify an Automatic Billing button. -->
+                <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                <!-- Specify details about the automatic billing plan. -->
+                <input type="hidden" name="lc" value="US">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="src" value="1">
+                <input type="hidden" name="p3" value="1">
+                <input type="hidden" name="t3" value="M">
+                <input type="hidden" name="currency_code" value="USD">
+                <!-- Make sure you get the buyer's address during checkout. -->
+                <input type="hidden" name="no_shipping" value="2">
+                <input type="hidden" name="charset" value="utf-8">
+
+                <div class="row">
+                    <div class="col-12 nav-tabs">
+                        <a href="" class="btn_styles donate-box" data-value="30">
+                            $30
+                        </a>
+                        <a href="" class="btn_styles donate-box active" data-value="20">
+                            $20
+                        </a>
+                        <a href="" class="btn_styles donate-box" data-value="10">
+                            $10
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="donate__description">Select or enter an amount to give per month. Thank you!</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="body">
+
+                            <div class="input">
+                                <input type="number" name="a3" value="20">
+                                <div class="addition">USD / MONTH</div>
+                            </div>
+                        <div class="donate__info">Fundi Kipusa Cbo Donation</div>
+                            <div class="donate_buttons">
+                                <!-- Display the Automatic Billing button. -->
+                                <input type="submit" value="Donate Monthly" alt="Donate Monthly" class="btn_styles">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+
+
+    </section>
+
+    <!------------footer---------------->
+    <footer>
+
+        <div class="footer__contacts">
+            <h1>
+                Fundi Kipusa
+            </h1>
+            <div>
+                <h2> E-MAIL:
+                    <span class="footer__contacts--span">contact@fundikipusa.co.ke</span>
+                </h2>
+
+                <h2> Phone:
+                    <span class="footer__contacts--span">+254 713956590</span>
+                </h2>
+                <h2> Address:
+                    <span class="footer__contacts--span">Mtwapa creek Mtwapa, Kilifi</span>
+
+                    <div class="footer__contacts-social">
+
+                        <a href="https://www.facebook.com/FundiKipusa/about/?ref=page_internal">
+                            <img src="images/icons/facebook-64.png" alt=" facebook link">
+                        </a>
+                        <a href=" https://www.youtube.com/results?search_query=speed+shop+kenya">
+                            <img src="images/icons/youtube.png" alt="youtube link">
+                        </a>
+                    </div>
+                </h2>
+            </div>
+
+
+
+            <div class="footer__contact--logo">
+                <a href="../index.html">
+                    <img src="images/logo/happyfish-smaller.png" alt="fundi kipusa logo">
+                </a>
+            </div>
+
+        </div>
+        <div class="footer__mailing--list">
+
+            <h1>Stay Updated</h1>
+            <p>Subscribe to our newsletter to get our latest news.</p>
+            <form id="contact" action="https://formsubmit.co/3801d72d81b553c61907efeb12c5c2d8" method="post">
+                <input type="text" name="_honey" style="display:none">
+                <input type="email" name="email" placeholder="Enter email address" class="footer__mailing--list_email"
+                    required>
+                <input type="hidden" name="_next" value="https://www.fundikipusa.co.ke/thanks.html">
+                <input type="submit" value="Subscribe" class="footer__mailing--list_submit">
+            </form>
+        </div>
+        <div class="footer__links">
+            <h1>Links</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#>Blog</a></li>
+                        <li><a href=" contact.html">contact</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <section class="footer-copyright">
+
+        <p class="copyright-text">&copy;
+            <script>document.write(new Date().getFullYear());</script> Copyright Fundi Kipusa.
+        </p>
+
+    </section>
+
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/all.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/donate.js"></script>
+</body>
+
+</html>
