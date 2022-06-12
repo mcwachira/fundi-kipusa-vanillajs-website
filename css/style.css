@@ -1252,37 +1252,49 @@ img {
     image-rendering: -webkit-optimize-contrast;
 }
 
+.grid-wrapper {
+    margin-bottom: 5rem;
+}
+
 .grid-wrapper>div {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: .5rem auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .grid-wrapper>div>img {
 
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 5px;
 }
 
-
 .grid-wrapper {
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+.grid-agriculture {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 200px;
     grid-auto-flow: dense;
 }
 
 .grid-wrapper .wide {
     grid-column: span 2;
-    grid-row: span 1.9;
 }
 
 .grid-wrapper .wider {
-    grid-column: span 3;
+    grid-column: span 2;
     grid-row: span 1.9;
 }
 
