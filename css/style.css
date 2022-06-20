@@ -524,7 +524,15 @@ a.donate:hover {
 
 .project__index {
     display: inline-block;
-    min-width: 450px;
+    min-width: 460px;
+}
+
+@media screen and (min-width:1200px) {
+    .project__index {
+        display: block;
+        min-width: 460px;
+    }
+
 }
 
 .contact-about {
@@ -1371,7 +1379,7 @@ img {
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin: 5rem 0 ;
+    margin: 5rem 0;
 
 }
 
