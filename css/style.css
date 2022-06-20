@@ -1371,6 +1371,7 @@ img {
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 5rem 0 ;
 
 }
 
