@@ -854,8 +854,8 @@ a.donate:hover {
     outline: none;
     background-color: #0E2973;
     color: #ffffff;
-    font-size: 2.3rem;
-    padding: 2rem 4rem;
+    font-size: 2rem;
+    padding: 1rem 3rem;
     margin: 3rem;
 }
 
@@ -967,7 +967,7 @@ a.donate:hover {
 
     .about__foundation--text_paragraph {
 
-        font-size: 1.8rem;
+        font-size: 2rem;
 
     }
 }
