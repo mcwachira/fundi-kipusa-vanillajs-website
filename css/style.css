@@ -762,7 +762,7 @@ a.donate:hover {
 
     .about__foundation--text_paragraph {
         width: 100%;
-        padding: 1rem 3rem;
+        padding: 1rem 5rem;
     
     }
   .about__foundation--text_paragraph p{
@@ -836,7 +836,7 @@ a.donate:hover {
 }
 
 .about__foundation--text_paragraph {
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
     font-size: 1.8rem;
     margin: 1rem auto;
     text-align: center;
