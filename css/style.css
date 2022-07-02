@@ -836,8 +836,8 @@ a.donate:hover {
 }
 
 .about__foundation--text_paragraph {
-    padding: 1rem 4rem;
-    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 1rem;
@@ -926,7 +926,7 @@ a.donate:hover {
 
 
     .about__foundation--text {
-        padding: 2rem 4rem;
+        padding: 1rem 3rem;
         margin: 1rem 0;
         width: 100%;
 
@@ -934,13 +934,13 @@ a.donate:hover {
 
 
     .about__foundation--text_h2 {
-        font-size: 4rem;
+        font-size: 3rem;
 
     }
 
     .about__foundation--text_paragraph {
 
-        font-size: 2.7rem;
+        font-size: 2.0rem;
 
     }
 
@@ -961,13 +961,13 @@ a.donate:hover {
     }
 
     .about__foundation--text_h2 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
 
     }
 
     .about__foundation--text_paragraph {
 
-        font-size: 2.2rem;
+        font-size: 1.8rem;
 
     }
 }
