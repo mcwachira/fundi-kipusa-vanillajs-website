@@ -768,6 +768,7 @@ a.donate:hover {
   .about__foundation--text_paragraph p{
     text-align: center;
           font-size: 2rem;
+      margin:0 auto;
   }
     .about__foundation--image {
         width: 50%;
@@ -780,7 +781,7 @@ a.donate:hover {
     }
     .about__foundation--text_button{
         padding: 1rem 3rem;
-        font-size:1..8rem;
+        font-size:1.8rem;
     }
 
 }
