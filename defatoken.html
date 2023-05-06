@@ -114,6 +114,52 @@
                     Paper PDF (German)</a>
             </div>
         </div>
+
+
+        <div class="Buy-token">
+            
+            <h1>
+                    Buy Our Nft Token
+            </h1>
+
+            <p class="buyNft-p">
+                We recently launched our defa Nft token which you can buy via the link below. The funds we collect from the sale of our nft will go along way to help us in our mission of decentralized farming .
+            </p>
+
+            <img class="buyNft-btn" src="https://studio.nmkr.io/images/buttons/paybutton_3_1.svg" onclick="javascript:openPaymentWindow()" alt="lint-to-buy-token">
+
+<script type="text/javascript">
+            function openPaymentWindow() {
+                const paymentUrl = "https://pay.nmkr.io/?p=72e30db68c5e45418ff9bc34eec7fd15&c=1";
+
+                // Specify the popup width and height
+                const popupWidth = 500;
+                const popupHeight = 700;
+
+                // Calculate the center of the screen
+                const left = window.top.outerWidth / 2 + window.top.screenX - ( popupWidth / 2);
+                const top = window.top.outerHeight / 2 + window.top.screenY - ( popupHeight / 2);
+
+                const popup =  window.open(paymentUrl, "NFT-MAKER PRO Payment Gateway",  `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`);
+
+                // Show dim background
+                document.body.style = "background: rgba(0, 0, 0, 0.5)";
+
+                // Continuously check whether the popup has been closed
+                const backgroundCheck = setInterval(function () {
+                    if(popup.closed) {
+                        clearInterval(backgroundCheck);
+
+                        console.log("Popup closed");
+
+                        // Remove dim background
+                        document.body.style = "";
+                    }
+                }, 1000);
+            }
+        </script>
+
+        </div>
     </div>
 
 
