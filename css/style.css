@@ -89,9 +89,10 @@ header .menu .dropdown-menu {
     border-radius: 1Opx;
     border: 1px;
     margin: 2rem 1rem;
-    height: 170px;
+    height: 200px;
     width: 170px;
-    background-color: #101F46;
+    background-color: #fff;
+    color: #000;
     opacity: none;
     transition: all 1s;
 
@@ -100,13 +101,14 @@ header .menu .dropdown-menu {
 header .menu .dropdown-menu li {
     padding: 10px 10px;
     list-style: none;
+    
 
 }
 
 header .menu .dropdown-menu li:hover {
 
     background-color: #fff;
-    /* color: #000; */
+    color: #000;
 
 }
 
@@ -117,7 +119,7 @@ header .menu .dropdown-menu li a {
     line-height: 1;
     margin: 0 30px;
     padding: 0 10px;
-    color: #fff;
+    color: #000;
 }
 
 header .menu .dropdown-menu li a:hover {
@@ -127,6 +129,7 @@ header .menu .dropdown-menu li a:hover {
 
 header .menu .dropdown-menu.display {
     display: block;
+    /* color: #000; */
 }
 
 header .donate {
@@ -255,7 +258,7 @@ a.donate:hover {
     header .menu .dropdown-menu li a {
         font-size: 2.5rem;
         margin: 0 0;
-        color: #fff;
+        color: #000;
         width: 50%;
     }
 
