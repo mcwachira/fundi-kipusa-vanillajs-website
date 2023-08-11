@@ -455,7 +455,7 @@ a.donate:hover {
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    font-size: 1.2rem;
+    font-size: .9rem;
     padding: 5rem auto;
     color: #FFF5E2;
 }
@@ -471,8 +471,8 @@ a.donate:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.7rem;
-    padding: 4rem 1rem;
+    font-size: 1.3rem;
+    padding: 3rem 1rem;
     text-align: center;
     flex-wrap: wrap;
 
@@ -483,7 +483,7 @@ a.donate:hover {
 .mission>h2,
 .projects-about>h2,
 .contact-about>h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -645,9 +645,9 @@ a.donate:hover {
     .mission,
     .projects-about,
     .contact-about {
-        width: 100%;
-        margin: 1rem 5rem;
-        padding: 3rem 5rem;
+        width: 80%;
+        margin: 1rem auto;
+        /* padding: 3rem 5rem; */
     }
 }
 
