@@ -43,7 +43,7 @@ header {
 
 header .btn {
     display: none;
-    font-size: 30px;
+    font-size: 20px;
     color: #000;
 
 }
@@ -78,7 +78,7 @@ header .menu li {
     margin: 0 15px;
     padding: 0 10px;
     color: #fff;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     /* width: 100%; */
 }
 
@@ -114,7 +114,7 @@ header .menu .dropdown-menu li:hover {
 
 header .menu .dropdown-menu li a {
     text-decoration: none;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     font-weight: 500;
     line-height: 1;
     margin: 0 30px;
@@ -146,7 +146,7 @@ a.donate:hover {
 }
 
 .donate {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
 
     text-transform: capitalize;
     background-color: transparent;
