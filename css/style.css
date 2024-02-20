@@ -3570,3 +3570,19 @@ fieldset {
 
         margin-top: 10rem;
     }
+
+
+
+/*------------------HEALTH SERVICES---------------------------- */
+
+.health-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 30px;
+}
+.health-list-items{
+    margin-bottom: 10px;
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+    font-size: 14px;
+}
