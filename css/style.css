@@ -3616,3 +3616,36 @@ fieldset {
     color: #fff;
     text-decoration: none;
 }
+
+/*Mrembo oil Page */
+
+.mrembo-oil-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+.mrembo-oil-heading{
+    color: #333;
+}
+.mrembo-oil-text{
+    color: #666;
+    font-size: 16px;
+}
+
+.mrembo-oil-section {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.mrembo-oil-list{
+    list-style-type: none;
+    padding: 0;
+}
+.mrembo-oil-list> li::before {
+    content: "\2022";
+    color: #666;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 19px;
+}
