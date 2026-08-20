@@ -29,50 +29,12 @@
     <link rel="stylesheet" href="css/font/flaticon.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/theme.css">
 <script>
-(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
+(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js')})();
 </script>
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        padding: 20px;
-    }
-
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    h2{
-        text-align: center;
-        margin: 20px;
-    }
-
-    p {
-        text-align: justify;
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-
-
-    .contact {
-        margin-top: 20px;
-    }
-
-    .contact p {
-        margin: 5px 0;
-        font-size: 16px;
-    }
-
-    .contact h3 {
-        margin-top: 10px;
-        font-size: 20px;
-    }
-</style>
 
 <body>
 <header>
@@ -162,7 +124,7 @@ Health Services
 
 
 
-    <div class="col-md-6 col-sm-12 video-area cta-video">
+    <div class="col-md-6 col-sm-12 video-area cta-video" data-aos="zoom-in">
         <video class="video" width="100%" height="auto" controls playsinline autoplay muted loop>
             <source src="https://fundikipusa.co.ke/videos/English-web-edited.mp4" type="video/mp4">
             <!-- <source src="https://fundikipusa.co.ke/viedos/fundikipusa-webm.webm" type="video/webm"> -->
@@ -175,6 +137,7 @@ Health Services
 
 </section>
 
+<div class="health-content" data-aos="fade-up">
 <h2>The socially acceptable exchange of healthcare workers from Kenya to Germany</h2>
 <p>The team at the FundiKipusa think tank is observing the current trend in labor migration from Kenya with great concern.</p>
 <p>Without a doubt, the need for workers for the healthcare system in Germany will be significant in the next few years.</p>
@@ -200,12 +163,7 @@ Health Services
 <ul class="health-list">
     <li class="health-list-items">Stephen Mc.Cormick LTD has legally registered in Germany and in the transparency register. With our Mr. Abbas Nargessi and Mr. Heino Dahmen, we have a local presence in Germany and can directly supervise and support exchange candidates from Kenya.</li>
     <li class="health-list-items">The representatives in Germany can establish direct contact with potential employers and can also provide direct contact with candidates from Kenya. This essentially prevents people in economic need from Kenya from being exploited or defrauded by dubious offers. Only verified direct contacts can lead to the conclusion of employment contracts.</li>
-    <li class="health-list-items">As a Kenyan company, Stephen Mc.Cormick LTD, in collaboration with FundiKipusa CBO, can identify local candidates whose private situation has a lasting limitation
-        ​
-        1,413 / 5,000
-        Translation results
-        Translation result
-        Staying in Germany is possible without giving up ties to your home country.</li>
+    <li class="health-list-items">As a Kenyan company, Stephen Mc.Cormick LTD, in collaboration with FundiKipusa CBO, can identify local candidates whose private situation has a lasting limitation. Staying in Germany is possible without giving up ties to your home country.</li>
 </ul>
 
 <h3>Our rules:</h3>
@@ -225,15 +183,13 @@ Health Services
 <p>We look forward to hearing from you and can answer any questions competently and directly.</p>
 <p>With kind regards</p>
 <p>Your FundiKipusa CBO team</p>
-
-
-
+</div>
 
 <div class="language-version">
     <a class="language-btn"
        href="health-services-german.html"> German Version</a>
 </div>
-<div class="cta__form">
+<div class="cta__form" data-aos="fade-up">
     <h2 class="cta__form--title">
         CONTACT US
     </h2>
@@ -267,7 +223,7 @@ Health Services
 <!------------footer---------------->
 <footer>
 
-    <div class="footer__contacts">
+    <div class="footer__contacts" data-aos="fade-up">
         <h2>
             Fundi Kipusa
         </h2>
@@ -302,7 +258,7 @@ Health Services
         </div>
 
     </div>
-    <div class="footer__mailing--list">
+    <div class="footer__mailing--list" data-aos="fade-up" data-aos-delay="100">
 
         <h2>Stay Updated</h2>
         <p>Subscribe to our newsletter to get our latest news.</p>
@@ -317,7 +273,7 @@ Health Services
         <input type="submit" value="Subscribe" class="footer__mailing--list_submit">
       </form>
     </div>
-    <div class="footer__links">
+    <div class="footer__links" data-aos="fade-up" data-aos-delay="200">
         <h2>Links</h2>
         <ul>
             <li><a href="index.html">Home</a></li>

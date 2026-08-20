@@ -26,9 +26,10 @@
   <link rel="stylesheet" href="css/font/flaticon.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/theme.css">
 <script>
-(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})();
+(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js')})();
 </script>
 </head>
 
@@ -108,7 +109,7 @@
 
   <section class="about">
     <a href="about.html" class="mission__link">
-      <div class="mission project__index ">
+      <div class="mission project__index " data-aos="fade-up">
 
 
         <h2>
@@ -124,7 +125,7 @@
 
 
     <a href="pages/agriculture.html" class="mission__link">
-      <div class="projects-about project__index">
+      <div class="projects-about project__index" data-aos="fade-up" data-aos-delay="100">
         <h2>
           Projects
         </h2>
@@ -140,7 +141,7 @@
     </a>
 
     <a href="contact.html" class="mission__link project__index ">
-      <div class="contact-about">
+      <div class="contact-about" data-aos="fade-up" data-aos-delay="200">
         <h2>
           Contact Us
         </h2>
@@ -194,7 +195,7 @@
 
 
 
-  <section class="about__foundation">
+  <section class="about__foundation" data-aos="fade-up">
 
     <div class="about__foundation--text">
 
@@ -232,7 +233,7 @@
 
 
   <section class="cta">
-    <div class="container cta-quotes">
+    <div class="container cta-quotes" data-aos="fade-up">
 
 
       <blockquote class="cta-quote">
@@ -249,7 +250,7 @@
 
 
 
-    <div class="col-md-6 col-sm-12 video-area cta-video">
+    <div class="col-md-6 col-sm-12 video-area cta-video" data-aos="zoom-in">
       <video class="video" width="100%" height="auto" controls playsinline autoplay muted loop>
         <source src="https://fundikipusa.co.ke/videos/fundikipusa-mp4.mp4" type="video/mp4">
         <source src="https://fundikipusa.co.ke/videos/fundikipusa-webm.webm" type="video/webm">
@@ -259,7 +260,7 @@
     </div>
 
 
-    <div class="cta__form">
+    <div class="cta__form" data-aos="fade-up">
       <h2 class="cta__form--title">
         CONTACT US
       </h2>
@@ -295,7 +296,7 @@
   <!------------footer---------------->
   <footer>
 
-    <div class="footer__contacts">
+    <div class="footer__contacts" data-aos="fade-up">
       <h2>
         Fundi Kipusa
       </h2>
@@ -331,7 +332,7 @@
       </div>
 
     </div>
-    <div class="footer__mailing--list">
+    <div class="footer__mailing--list" data-aos="fade-up" data-aos-delay="100">
 
       <h2>Stay Updated</h2>
       <p>Subscribe to our newsletter to get our latest news.</p>
@@ -346,7 +347,7 @@
         <input type="submit" value="Subscribe" class="footer__mailing--list_submit">
       </form>
     </div>
-    <div class="footer__links">
+    <div class="footer__links" data-aos="fade-up" data-aos-delay="200">
       <h2>Links</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
