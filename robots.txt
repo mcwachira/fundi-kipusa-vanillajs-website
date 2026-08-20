@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /images/temp/
+
+# Allow public assets
+Allow: /*.css$
+Allow: /*.js$
+Allow: /images/
+Allow: /videos/
+
+# Crawl settings
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://www.fundikipusa.co.ke/sitemap.xml
+
+# Additional user agents
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: Bingbot
+Disallow: /admin/
+Disallow: /private/
