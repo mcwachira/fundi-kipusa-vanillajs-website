@@ -911,12 +911,12 @@ cite {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 720px;
+    max-width: 860px;
     margin: .5rem auto;
     background-color: var(--surface-color, #fff);
     border-radius: 18px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-    padding: 3rem;
+    padding: 3.5rem;
     box-sizing: border-box;
 }
 
@@ -2197,7 +2197,7 @@ footer .footer__contacts div>h2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     justify-content: center;
     align-items: center;
     margin: 4rem auto;
@@ -2205,14 +2205,14 @@ footer .footer__contacts div>h2 {
 }
 
 .form__container {
-    max-width: 480px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
     position: relative;
     background-color: var(--surface-color, #fff);
     border-radius: 20px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-    padding: 3rem;
+    padding: 3.5rem;
 }
 
 .contact__image-container {
