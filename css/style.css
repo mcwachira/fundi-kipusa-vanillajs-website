@@ -654,7 +654,7 @@ a.donate:hover {
     }
 }
 
-@media screen and(max-width:425px) {
+@media screen and (max-width:425px) {
 
     .mission,
     .projects-about,
@@ -1568,7 +1568,7 @@ img {
 }
 
 
-@media screen and(max-width:490px) {
+@media screen and (max-width:490px) {
 
     .about__mission--image-responsive {
         width: 100%;
@@ -1698,8 +1698,6 @@ img {
 .agriculture__gallery--img {
     width: 100%;
 }
-
-@media screen and (max-width:991px) {}
 
 /*---------------- Engineering page ------------------------*/
 .engineering {
@@ -2009,11 +2007,20 @@ img {
     font-size: 2.2rem;
     margin:2rem auto
 }
+.buyNft-btn-wrapper {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+}
 .buyNft-btn{
     padding: 3rem 3rem;
     margin: 0 5rem;
     justify-content: center;
     margin-top: -2rem;
+    max-width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width:1230px) {
@@ -2081,9 +2088,9 @@ footer {
 
 }
 
-.footer__contacts h1,
-.footer__mailing--list h1,
-.footer__links h1 {
+.footer__contacts h2,
+.footer__mailing--list h2,
+.footer__links h2 {
 
     margin: 2rem 0;
 }
@@ -2158,7 +2165,7 @@ footer {
     background-color: #9E1039;
 }
 
-.footer__links h1 {
+.footer__links h2 {
     text-align: right;
 }
 
@@ -2213,9 +2220,9 @@ footer {
         text-align: center;
     }
 
-    .footer__contacts h1,
-    .footer__mailing--list h1,
-    .footer__links h1 {
+    .footer__contacts h2,
+    .footer__mailing--list h2,
+    .footer__links h2 {
 
 
         margin: 2rem auto;
@@ -2283,7 +2290,7 @@ footer {
     }
 
 
-    .footer__links h1 {
+    .footer__links h2 {
         text-align: center;
         font-size: 3.5rem;
         margin-top: 2rem;
@@ -2316,9 +2323,9 @@ footer {
 
 @media screen and (max-width:769px) {
 
-    .footer__contacts h1,
-    .footer__mailing--list h1,
-    .footer__links h1 {
+    .footer__contacts h2,
+    .footer__mailing--list h2,
+    .footer__links h2 {
 
 
         margin: .5rem auto;
@@ -2368,7 +2375,7 @@ footer {
     }
 
 
-    .footer__links h1 {
+    .footer__links h2 {
         text-align: center;
     }
 
@@ -2384,7 +2391,7 @@ footer {
     }
 
 
-    .footer__links h1 {
+    .footer__links h2 {
         text-align: center;
         font-size: 2.5rem;
         margin-top: 1rem;
@@ -3648,4 +3655,527 @@ fieldset {
     width: 1em;
     margin-left: -1em;
     font-size: 19px;
+}
+/* ============================================
+   Comprehensive Responsive Styles
+   ============================================ */
+
+/* Base responsive styles */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+/* Typography scaling */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* Container responsiveness */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video responsiveness */
+video,
+iframe,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form responsiveness */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Button responsiveness */
+button,
+input[type="submit"],
+input[type="button"],
+.btn {
+  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Table responsiveness */
+table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* ============================================
+   Mobile First - Small Phones (320px - 479px)
+   ============================================ */
+@media screen and (max-width: 479px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+    padding: 8px 10px;
+  }
+
+  .menu.act {
+    width: 100%;
+  }
+
+  .header__background {
+    height: 70vh;
+  }
+
+  .header_main-text span {
+    font-size: 2rem;
+  }
+
+  .what_we_do--main-text {
+    font-size: 2rem;
+  }
+
+  .our-work {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .home-icons {
+    width: 50px;
+    height: 50px;
+  }
+
+  .about__foundation {
+    flex-direction: column;
+  }
+
+  .about__foundation--image {
+    margin-top: 20px;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  .cta-quotes {
+    padding: 20px;
+  }
+
+  .cta-quote {
+    font-size: 1.2rem;
+  }
+
+  .video-area {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cta__form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .cta-contact__form input,
+  .cta-contact__form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .cta-submit__button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .footer__contacts,
+  .footer__mailing--list,
+  .footer__links {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about__section {
+    padding: 40px 20px;
+  }
+
+  .about__section--text {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .mission,
+  .projects-about,
+  .contact-about {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Fix overflow issues */
+  .dropdown-menu {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ============================================
+   Mobile - Phones (480px - 767px)
+   ============================================ */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+
+  .our-work {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header__background {
+    height: 75vh;
+  }
+
+  .header_main-text span {
+    font-size: 2.5rem;
+  }
+
+  .what_we_do--main-text {
+    font-size: 2.2rem;
+  }
+
+  .cta-quote {
+    font-size: 1.4rem;
+  }
+}
+
+/* ============================================
+   Tablets - Portrait (768px - 991px)
+   ============================================ */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 16px;
+  }
+
+  .our-work {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header__background {
+    height: 80vh;
+  }
+
+  .header_main-text span {
+    font-size: 3rem;
+  }
+
+  .about__foundation {
+    flex-direction: row;
+  }
+
+  .about__foundation--text {
+    padding: 30px;
+  }
+
+  .about__foundation--image {
+    flex: 1;
+  }
+
+  /* Mobile menu styles */
+  .menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    max-width: 400px;
+    transition: right 0.3s ease;
+  }
+
+  .menu.act {
+    right: 0;
+  }
+}
+
+/* ============================================
+   Tablets - Landscape / Small Desktops (992px - 1199px)
+   ============================================ */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .header__background {
+    height: 85vh;
+  }
+
+  .header_main-text span {
+    font-size: 3.5rem;
+  }
+
+  .what_we_do--main-text {
+    font-size: 2.8rem;
+  }
+
+  .about__foundation--text {
+    padding: 40px;
+  }
+
+  .cta {
+    padding: 40px 20px;
+  }
+
+  .cta-quote {
+    font-size: 1.8rem;
+  }
+
+  .video-area {
+    padding: 20px;
+  }
+}
+
+/* ============================================
+   Desktops (1200px - 1439px)
+   ============================================ */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .header__background {
+    height: 90vh;
+  }
+
+  .header_main-text span {
+    font-size: 4rem;
+  }
+
+  .what_we_do--main-text {
+    font-size: 3rem;
+  }
+
+  .about__foundation--text {
+    padding: 50px;
+  }
+
+  .about__foundation--text_h2 {
+    font-size: 2.5rem;
+  }
+
+  .about__foundation--text_paragraph p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .cta-quote {
+    font-size: 2rem;
+  }
+}
+
+/* ============================================
+   Large Desktops (1440px+)
+   ============================================ */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .header__background {
+    height: 90vh;
+    min-height: 600px;
+  }
+
+  .header_main-text span {
+    font-size: 4.5rem;
+  }
+
+  .what_we_do--main-text {
+    font-size: 3.5rem;
+  }
+
+  .about__foundation {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .about__foundation--text {
+    padding: 60px;
+  }
+
+  .about__foundation--text_h2 {
+    font-size: 3rem;
+  }
+
+  .about__foundation--text_paragraph p {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+
+  .cta {
+    padding: 60px 40px;
+  }
+
+  .cta-quote {
+    font-size: 2.2rem;
+    line-height: 1.6;
+  }
+
+  .cta__form {
+    padding: 40px;
+  }
+
+  /* Ensure content doesn't stretch too wide */
+  .about__section--text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+/* ============================================
+   Extra Large Screens (1920px+)
+   ============================================ */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .header__background {
+    min-height: 700px;
+  }
+
+  .header_main-text span {
+    font-size: 5rem;
+  }
+
+  .what_we_do--main-text {
+    font-size: 4rem;
+  }
+
+  /* Center content on very wide screens */
+  .about__foundation,
+  .cta,
+  .about__section--text {
+    max-width: 1600px;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  header,
+  footer,
+  .theme-toggle,
+  .menu-btn {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   High Contrast Mode
+   ============================================ */
+@media (prefers-contrast: high) {
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    border-width: 2px;
+  }
+}
+
+/* ============================================
+   Dark Mode Specific Responsive Adjustments
+   ============================================ */
+[data-theme="dark"] .header__background {
+  background-color: #1a1a1a;
+}
+
+[data-theme="dark"] .about__foundation--text {
+  background-color: #2d3a4a;
+}
+
+[data-theme="dark"] .mission,
+[data-theme="dark"] .projects-about,
+[data-theme="dark"] .contact-about {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }

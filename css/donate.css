@@ -22,7 +22,7 @@ header nav {
   height: 100%;
 }
 
-.donate__heading>h2 {
+.donate__heading>h1 {
   font-size: 3rem;
   margin-top: 4rem;
   color: rgb(80, 67, 67);
@@ -48,7 +48,7 @@ header nav {
 }
 
 @media only screen and (max-device-width: 425px) {
-  .donate__heading>h2 {
+  .donate__heading>h1 {
     margin-top: 5rem;
   }
 }

@@ -1,370 +1,436 @@
+/**
+ * Fundi Kipusa - Main Application JavaScript
+ * Handles mobile navigation, theme switching, and form validation
+ */
 
-window.addEventListener('scroll', () => {
+// ============================================
+// Mobile Navigation
+// ============================================
+
+/**
+ * Toggle mobile menu
+ */
+function initMobileNavigation() {
+  const menu = document.querySelector('.menu');
+  const openMenu = document.querySelector('.menu-btn');
+  const closeMenu = document.querySelector('.close-btn');
+
+  if (!menu || !openMenu || !closeMenu) return;
+
+  // Open menu
+  openMenu.addEventListener('click', () => {
+    menu.classList.add('act');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close menu
+  closeMenu.addEventListener('click', () => {
+    menu.classList.remove('act');
+    document.body.style.overflow = '';
+  });
+
+  // Close menu when clicking a link (for mobile)
+  const navLinks = menu.querySelectorAll('a[href]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (menu.classList.contains('act')) {
+        menu.classList.remove('act');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+}
+
+/**
+ * Initialize dropdown menus
+ */
+function initDropdowns() {
+  const dropDown = document.querySelector('.dropdown');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  if (!dropDown || !dropdownMenu) return;
+
+  dropDown.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle('display');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropDown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove('display');
+    }
+  });
+}
+
+// ============================================
+// Theme Switching
+// ============================================
+
+/**
+ * Initialize theme from localStorage or system preference
+ */
+function initTheme() {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  
+  document.documentElement.setAttribute('data-theme', theme);
+  updateToggleButton(theme);
+  
+  return theme;
+}
+
+/**
+ * Update theme toggle button state
+ */
+function updateToggleButton(theme) {
+  const btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.innerHTML = `<span aria-hidden="true">${theme === 'dark' ? '☀️' : '🌙'}</span>`;
+    btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+}
+
+/**
+ * Toggle between dark and light themes
+ */
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateToggleButton(next);
+}
+
+/**
+ * Initialize theme toggle button
+ */
+function initThemeToggle() {
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+    // Update button state on load
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    updateToggleButton(currentTheme || 'light');
+  }
+}
+
+// ============================================
+// Form Validation
+// ============================================
+
+/**
+ * Validate email address
+ */
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+/**
+ * Validate phone number (basic check for 10+ digits)
+ */
+function validatePhone(phone) {
+  if (!phone) return true; // Phone is optional
+  const cleaned = phone.replace(/\D/g, '');
+  return cleaned.length >= 10;
+}
+
+/**
+ * Show validation error for a field
+ */
+function showFieldError(input, message) {
+  input.classList.add('error');
+  let errorMsg = input.nextElementSibling;
+  while (errorMsg && !errorMsg.classList.contains('error-message')) {
+    errorMsg = errorMsg.nextElementSibling;
+  }
+  if (errorMsg && errorMsg.classList.contains('error-message')) {
+    errorMsg.textContent = message;
+    errorMsg.style.display = 'block';
+  }
+}
+
+/**
+ * Hide validation error for a field
+ */
+function hideFieldError(input) {
+  input.classList.remove('error');
+  let errorMsg = input.nextElementSibling;
+  while (errorMsg && !errorMsg.classList.contains('error-message')) {
+    errorMsg = errorMsg.nextElementSibling;
+  }
+  if (errorMsg && errorMsg.classList.contains('error-message')) {
+    errorMsg.style.display = 'none';
+  }
+}
+
+/**
+ * Validate a form before submission
+ */
+function validateForm(form) {
+  const inputs = form.querySelectorAll('[required], input[type="email"], input[type="tel"]');
+  let isValid = true;
+  let firstInvalid = null;
+
+  inputs.forEach(input => {
+    const value = input.value?.trim();
+    
+    // Check required fields
+    if (input.required && !value) {
+      showFieldError(input, 'This field is required');
+      isValid = false;
+      if (!firstInvalid) firstInvalid = input;
+      return;
+    }
+
+    // Validate email
+    if (input.type === 'email' && value && !validateEmail(value)) {
+      showFieldError(input, 'Please enter a valid email address');
+      isValid = false;
+      if (!firstInvalid) firstInvalid = input;
+      return;
+    }
+
+    // Validate phone (if present)
+    if (input.type === 'tel' && value && !validatePhone(value)) {
+      showFieldError(input, 'Please enter a valid phone number');
+      isValid = false;
+      if (!firstInvalid) firstInvalid = input;
+      return;
+    }
+
+    // Field is valid
+    hideFieldError(input);
+  });
+
+  // Focus on first invalid field
+  if (firstInvalid) {
+    firstInvalid.focus();
+    if (firstInvalid.scrollIntoView) {
+      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  return isValid;
+}
+
+/**
+ * Get (or lazily create) the success/error status containers for a form
+ */
+function getFormStatusElements(form) {
+  let successEl = form.querySelector('.form-success');
+  let errorEl = form.querySelector('.form-error');
+
+  if (!successEl) {
+    successEl = document.createElement('div');
+    successEl.className = 'form-success';
+    successEl.setAttribute('role', 'status');
+    successEl.setAttribute('aria-live', 'polite');
+    form.insertBefore(successEl, form.firstChild);
+  }
+  if (!errorEl) {
+    errorEl = document.createElement('div');
+    errorEl.className = 'form-error';
+    errorEl.setAttribute('role', 'alert');
+    form.insertBefore(errorEl, form.firstChild);
+  }
+
+  return { successEl, errorEl };
+}
+
+/**
+ * Toggle a form's loading state and its submit button label
+ */
+function setFormLoadingState(form, submitBtn, isLoading) {
+  form.classList.toggle('form-loading', isLoading);
+  if (!submitBtn) return;
+
+  if (isLoading) {
+    submitBtn.dataset.submitting = 'true';
+    submitBtn.dataset.originalLabel = submitBtn.value || submitBtn.textContent;
+    const loadingLabel = 'Sending...';
+    if (submitBtn.tagName === 'INPUT') {
+      submitBtn.value = loadingLabel;
+    } else {
+      submitBtn.textContent = loadingLabel;
+    }
+    submitBtn.disabled = true;
+  } else {
+    submitBtn.dataset.submitting = 'false';
+    submitBtn.disabled = false;
+    const originalLabel = submitBtn.dataset.originalLabel;
+    if (originalLabel) {
+      if (submitBtn.tagName === 'INPUT') {
+        submitBtn.value = originalLabel;
+      } else {
+        submitBtn.textContent = originalLabel;
+      }
+    }
+  }
+}
+
+/**
+ * Initialize form validation and submission (AJAX where possible, so the
+ * page never has to reload and the visitor sees a real success/failure state)
+ */
+function initFormValidation() {
+  const forms = document.querySelectorAll('form');
+
+  forms.forEach(form => {
+    const { successEl, errorEl } = getFormStatusElements(form);
+    const isAjaxCapable = /formsubmit\.co/.test(form.getAttribute('action') || '') && typeof fetch === 'function';
+
+    form.addEventListener('submit', (e) => {
+      successEl.classList.remove('show');
+      errorEl.classList.remove('show');
+
+      // Validate form
+      if (!validateForm(form)) {
+        e.preventDefault();
+        errorEl.textContent = 'Please fix the highlighted fields and try again.';
+        errorEl.classList.add('show');
+        return;
+      }
+
+      // Honeypot: silently drop obvious bot submissions
+      const honeypot = form.querySelector('input[name="_honey"]');
+      if (honeypot && honeypot.value) {
+        e.preventDefault();
+        return;
+      }
+
+      const submitBtn = form.querySelector('[type="submit"], button[type="submit"]');
+
+      // Prevent duplicate submissions
+      if (submitBtn && submitBtn.dataset.submitting === 'true') {
+        e.preventDefault();
+        return;
+      }
+
+      // Forms that don't post to FormSubmit (e.g. PayPal donation forms)
+      // must navigate normally - we only validate them, never intercept.
+      if (!isAjaxCapable) {
+        setFormLoadingState(form, submitBtn, true);
+        return;
+      }
+
+      e.preventDefault();
+      setFormLoadingState(form, submitBtn, true);
+
+      const ajaxAction = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+      const formData = new FormData(form);
+
+      fetch(ajaxAction, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      })
+        .then(response => {
+          if (!response.ok) throw new Error('Submission failed');
+          return response.json();
+        })
+        .then(() => {
+          form.reset();
+          successEl.textContent = 'Thank you! Your message has been sent successfully.';
+          successEl.classList.add('show');
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(() => {
+          errorEl.textContent = 'Sorry, something went wrong sending your message. Please try again or email us directly at contact@fundikipusa.co.ke.';
+          errorEl.classList.add('show');
+        })
+        .finally(() => {
+          setFormLoadingState(form, submitBtn, false);
+        });
+    });
+
+    // Add real-time validation for better UX
+    const requiredInputs = form.querySelectorAll('[required]');
+    requiredInputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (input.value?.trim()) {
+          hideFieldError(input);
+        }
+      });
+    });
+
+    // Email validation on blur
+    const emailInputs = form.querySelectorAll('input[type="email"]');
+    emailInputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (input.value && !validateEmail(input.value)) {
+          showFieldError(input, 'Please enter a valid email address');
+        } else if (input.value) {
+          hideFieldError(input);
+        }
+      });
+    });
+  });
+}
+
+// ============================================
+// Scroll Effects
+// ============================================
+
+/**
+ * Initialize scroll effects (sticky header)
+ */
+function initScrollEffects() {
   const header = document.querySelector('header');
-  header.classList.toggle('sticky', window.scrollY > 0)
-})
+  if (!header) return;
 
-//control the mobile navigation
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('sticky', window.scrollY > 0);
+  }, { passive: true });
+}
 
-const menu = document.querySelector('.menu')
-const openMenu = document.querySelector('.menu-btn')
-const closeMenu = document.querySelector('.close-btn')
+// ============================================
+// Keyboard Navigation
+// ============================================
 
+/**
+ * Initialize keyboard navigation for accessibility
+ */
+function initKeyboardNavigation() {
+  // Add visible focus styles for keyboard users
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-navigation');
+    }
+  });
 
+  document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-navigation');
+  });
 
-const dropDown = document.querySelector('.dropdown')
-const dropdownMenu = document.querySelector('.dropdown-menu')
+  // Ensure all interactive elements are keyboard accessible
+  const interactiveElements = document.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  interactiveElements.forEach(el => {
+    if (!el.hasAttribute('tabindex') || el.tabIndex === -1) {
+      el.setAttribute('tabindex', '0');
+    }
+  });
+}
 
+// ============================================
+// Initialize Everything
+// ============================================
 
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileNavigation();
+  initDropdowns();
+  initThemeToggle();
+  initFormValidation();
+  initScrollEffects();
+  initKeyboardNavigation();
+});
 
-openMenu.addEventListener('click', () => {
-  menu.classList.add('act')
-})
-
-closeMenu.addEventListener('click', () => {
-  // header.classList.remove('sticky')
-  menu.classList.remove('act')
-})
-
-dropDown.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('display')
-})
-
-
-
-
-//submenu
-
-// const items = document.querySelectorAll('.item')
-
-// function toggleSubMenu() {
-//   if (this.classList.contains('submenu-active')) {
-//     this.classList.remove('submenu-active');
-//   } else {
-//     if (menu.querySelector(".submenu.active")) {
-//       menu.querySelector(".submenu-active").classList.remove("submenu-active")
-//       this.classList.add('submenu-active')
-//     } else {
-//       this.classList.add('submenu-active')
-//     }
-
-//   }
-// }
-
-// // Event listeners
-
-// for (let item of items) {
-//   if (item.querySelector(".submenu")) {
-//     item.addEventListener('click', toggleSubMenu, false);
-//     item.addEventListener('keypress', toggleSubMenu, false)
-//   }
-// }
-
-
-
-
-
-// var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
-// for (; i < all.length; i++) {
-//   rect = all[i].getBoundingClientRect();
-//   if (rect.right > docWidth || rect.left < 0) {
-//     console.log(all[i]);
-//     all[i].style.borderTop = '1px solid red';
-//   }
-// }
-
-
-
-
-
-// let navbar = document.querySelector(".navbar");
-// let scrollPos = window.scrollY;
-// let allLinks = document.querySelectorAll(".nav-item");
-// let mainLinks = document.querySelectorAll(".main-link");
-// let button = document.querySelector("#toggleHeight");
-// let section = document.querySelector(".home__svg");
-// window.addEventListener("scroll", function () {
-//   scrollPos = window.scrollY;
-
-//   if (scrollPos >= 50) {
-//     navbar.classList.add("affix");
-//     // document.querySelectorAll(".main-link").forEach((el) => {
-//     //   el.style.color = "white";
-//     // });
-//   } else if (scrollPos >= 50 && allLinks.length > 0) {
-//     allLinks.classList.add("link-style");
-//   } else {
-//     navbar.classList.remove("affix");
-//   }
-// });
-
-
-// button.addEventListener("click", function () {
-//   console.log("hellow");
-//   section.classList.toggle("HeightAdjust");
-// });
-// const cryptoPage = document.querySelector(".crypto__data");
-
-// const api = "e64b531caf9cc9eed3502a44e44a949b";
-// const cryptoData = async () => {
-//   const base =
-//     "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,XRP,ADA,BNB,USDT,DOGE,AGI,TRX,VET&tsyms=USD";
-//   //const query =`?access_key=${api}&target=usd&symbol=BTC,ETH,XRP`;
-//   // const query = `?access_key=${api}&target=usd&symbols=BTC,ETH,XRP,ADA,BNB,USDT,DOGE,AGI,TRX,VEN`;
-//   const query = `&api_key={api} `;
-//   const response = await fetch(base + query);
-//   const data = await response.json();
-//   //00`
-//   console.log(data);
-//   //const coinData = data.rates;
-//   //Object.keys takes object as argument and returns array containing all the properties in the object.
-//   const keys = Object.entries(data);
-//   console.log(keys);
-//   keys.forEach((key) => {
-//     console.log(`${key}: ${key[1].USD}`);
-//   });
-
-//   // const value = Object.values(data)
-//   //   console.log(value)
-
-//   keys.forEach((key, index) => {
-//     // console.log(`${key} : ${coinData[key]}`)
-//     const coinName = key[0].toLowerCase();
-//     console.log(coinName);
-//     switch (coinName) {
-//       case "ada":
-//         let adaSrc = `../images/svg/cardano-ada-logo.svg`;
-//         const ada = document.createElement("div");
-
-//         const adaImg = document.createElement("img");
-//         adaImg.classList.add("img-style");
-//         adaImg.setAttribute("src", adaSrc);
-//         ada.appendChild(adaImg);
-
-//         const adaText = document.createElement("h2");
-//         adaText.innerHTML = "cardano";
-//         ada.appendChild(adaText);
-//         const adaPrice = document.createElement("h3");
-//         adaPrice.innerHTML = `${key[1].USD}`;
-//         ada.appendChild(adaPrice);
-//         cryptoPage.appendChild(ada);
-
-//         console.log(`${key[1].USD}`);
-//         break;
-//       case "bnb":
-//         let bnbSrc = `../images/svg/binance-coin-bnb-logo.svg`;
-//         const bnb = document.createElement("div");
-//         const bnbImg = document.createElement("img");
-//         bnbImg.classList.add("img-style");
-//         bnbImg.setAttribute("src", bnbSrc);
-//         bnb.appendChild(bnbImg);
-
-//         const bnbText = document.createElement("h2");
-//         bnbText.innerHTML = "Binance coin";
-//         bnb.appendChild(bnbText);
-
-//         const bnbPrice = document.createElement("h3");
-//         bnbPrice.innerHTML = `${key[1].USD}`;
-//         bnb.appendChild(bnbPrice);
-//         cryptoPage.appendChild(bnb);
-//         //console.log(`${coinData[key]}`);
-//         break;
-//       case "btc":
-//         let btcSrc = `../images/svg/bitcoin-btc-logo.svg`;
-//         const btc = document.createElement("div");
-//         const btcImg = document.createElement("img");
-//         btcImg.classList.add("img-style");
-//         btcImg.setAttribute("src", btcSrc);
-//         btc.appendChild(btcImg);
-
-//         const btcText = document.createElement("h2");
-//         btcText.innerHTML = "Bitcoin";
-//         btc.appendChild(btcText);
-
-//         const btcPrice = document.createElement("h3");
-//         btcPrice.innerHTML = `${key[1].USD}`;
-//         btc.appendChild(btcPrice);
-//         cryptoPage.appendChild(btc);
-//         // console.log(value);
-//         // console.log(`${coinData[key]}`);
-//         break;
-
-//       case "doge":
-//         let dogeSrc = `../images/svg/dogecoin-doge-logo.svg`;
-//         const doge = document.createElement("div");
-//         const dogeImg = document.createElement("img");
-//         dogeImg.classList.add("img-style");
-//         dogeImg.setAttribute("src", dogeSrc);
-//         doge.appendChild(dogeImg);
-
-//         const dogeText = document.createElement("h2");
-//         dogeText.innerHTML = "Doge";
-//         doge.appendChild(dogeText);
-
-//         const dogePrice = document.createElement("h3");
-//         dogePrice.innerHTML = `${key[1].USD}`;
-//         doge.appendChild(dogePrice);
-//         cryptoPage.appendChild(doge);
-//         //console.log(`${coinData[key]}`);
-//         break;
-//       case "eth":
-//         let ethSrc = `../images/svg/ethereum-eth-logo.svg`;
-//         const eth = document.createElement("div");
-//         const ethImg = document.createElement("img");
-//         ethImg.classList.add("img-style");
-//         ethImg.setAttribute("src", ethSrc);
-//         eth.appendChild(ethImg);
-
-//         const ethText = document.createElement("h2");
-//         ethText.innerHTML = "Etherium";
-//         eth.appendChild(ethText);
-//         const ethPrice = document.createElement("h3");
-//         ethPrice.innerHTML = `${key[1].USD}`;
-//         eth.appendChild(ethPrice);
-//         cryptoPage.appendChild(eth);
-//         //console.log(`${coinData[key]}`);
-//         break;
-//       case "usdt":
-//         let usdtSrc = `../images/svg/tether-usdt-logo.svg`;
-//         const usdt = document.createElement("div");
-//         const usdtImg = document.createElement("img");
-//         usdtImg.classList.add("img-style");
-//         usdtImg.setAttribute("src", usdtSrc);
-//         usdt.appendChild(usdtImg);
-
-//         const usdtText = document.createElement("h2");
-//         usdtText.innerHTML = "Tether";
-//         usdt.appendChild(usdtText);
-//         const usdtPrice = document.createElement("h3");
-//         usdtPrice.innerHTML = `${key[1].USD}.00`;
-//         usdt.appendChild(usdtPrice);
-//         cryptoPage.appendChild(usdt);
-//         //console.log(`${coinData[key]}`);
-//         break;
-//       //
-//       case "xrp":
-//         let xrpSrc = `../images/svg/xrp-xrp-logo.svg`;
-//         const xrp = document.createElement("div");
-//         const xrpImg = document.createElement("img");
-//         xrpImg.classList.add("img-style");
-//         xrpImg.setAttribute("src", xrpSrc);
-//         xrp.appendChild(xrpImg);
-
-//         const xrpText = document.createElement("h2");
-//         xrpText.innerHTML = "Ripple";
-//         xrp.appendChild(xrpText);
-//         const xrpPrice = document.createElement("h3");
-//         xrpPrice.innerHTML = `${key[1].USD}`;
-//         xrp.appendChild(xrpPrice);
-//         cryptoPage.appendChild(xrp);
-//         //console.log(`${coinData[key]}`);
-//         break;
-
-//       case "trx":
-//         let trxSrc = `../images/svg/tron-trx-logo.svg`;
-//         const trx = document.createElement("div");
-//         const trxImg = document.createElement("img");
-//         trxImg.classList.add("img-style");
-//         trxImg.setAttribute("src", trxSrc);
-//         trx.appendChild(trxImg);
-
-//         const trxText = document.createElement("h2");
-//         trxText.innerHTML = "Tron";
-//         trx.appendChild(trxText);
-
-//         const trxPrice = document.createElement("h3");
-//         trxPrice.innerHTML = `${key[1].USD}`;
-//         trx.appendChild(trxPrice);
-//         cryptoPage.appendChild(trx);
-//         // console.log(`${coinData[key]}`);
-//         break;
-
-//       case "vet":
-//         let vetSrc = `../images/svg/vechain-vet-logo.svg`;
-//         const vet = document.createElement("div");
-//         const vetImg = document.createElement("img");
-//         vetImg.classList.add("img-style");
-//         vetImg.setAttribute("src", vetSrc);
-//         vet.appendChild(vetImg);
-
-//         const vetText = document.createElement("h2");
-//         vetText.innerHTML = "veChain";
-//         vet.appendChild(vetText);
-//         const vetPrice = document.createElement("h3");
-//         vetPrice.innerHTML = `${key[1].USD}`;
-//         vet.appendChild(vetPrice);
-//         cryptoPage.appendChild(vet);
-//         //console.log(`${coinData[key]}`);
-//         break;
-//       default:
-//         console.log("this is a coin");
-//     }
-//   });
-// Object.values(coinData).forEach(coin => console.log(coin))
-// for(const [key, value] of Object.entries(coinData)){
-//      let key  =`${key}`;
-//         console.log(`${key}`);
-//         // const key = `${key}`;
-//         // console.log(key)
-//     }
-// };
-// const coinData = data.rates;
-// const keys = Object.entries(coinData);
-// console.log(keys)
-// const display = keys.forEach(([key value]) =>  {
-//     console.log(`${key} :${key[value]}`)
-// });
-
-// const coinData = data.rates;
-// looping over object using for ..in
-// for(const key in coinData){
-//     console.log(`${key} :${coinData[key]}`)
-// }
-
-//Object.keys takes object as argument and returns array containing all the properties in the object.
-// const keys = Object.keys(coinData);
-// console.log(keys)
-//     keys.forEach((key, index) =>  {
-//     console.log(`${key} : ${coinData[key]}`)
-//     })
-
-//Object.Values takes an Object  and returns array containing the values of all the properties in the object.
-// const keys = Object.values(coinData).forEach(coin => console.log(coin));
-// console.log(keys)
-//Object.entries takes an Object traverses over it and produces an array fo an array .
-// each inner array contain two elements Object and value;.
-// const keys = Object.entries(coinData);
-// console.log(keys);
-
-// for(const [key, value] of Object.entries(coinData)){
-//     console.log(`${key} : ${coinData[key]}`);
-// }
-
-// const cryptoNames = [];
-// const cryptoPrices =[]
-// Object.entries(coinData).forEach(([key,value]) =>   {
-//     // console.log(`${key} : ${coinData[key]}`);
-//     const names= `${key}`;
-//     const price= `${value}`;
-//     cryptoNames.push(names);
-//     cryptoPrices.push(price);
-//
-// })
-// console.log(cryptoNames);
-// console.log(cryptoPrices);
-
-// cryptoData();
-
-// cryptoData().then(data => {
-//     console.log(data);
-// }).catch(err => {
-//     console.log(err)
-// });
-
-// import cryptoData from "/api";
-//
-// const cyptoSpace = document.querySelector('.crypto__data');
-// const data = cryptoData()
-// data.then(data  => {
-//     console.log(data)
-// } );
+// Initialize theme immediately to prevent FOUC
+(function() {
+  initTheme();
+})();

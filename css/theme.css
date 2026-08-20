@@ -1,0 +1,523 @@
+/* Dark Mode & Theme System */
+/* Prevent flash of wrong theme - set body background immediately */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html[data-theme="dark"] body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e8e8e8;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --border-color: #dddddd;
+  --border-light: #eeeeee;
+  --border-dark: #cccccc;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --header-bg: #181112;
+  --header-bg-hover: #0d0d0d;
+  --primary-color: #00A7E1;
+  --primary-hover: #0088c8;
+  --primary-light: #40bfff;
+  --secondary-color: #507500;
+  --secondary-hover: #3d5b00;
+  --success-color: #4CAF50;
+  --success-light: #81c784;
+  --success-dark: #388e3c;
+  --error-color: #f44336;
+  --error-light: #ff7a7a;
+  --warning-color: #ff9800;
+  --warning-light: #ffb74d;
+  --info-color: #2196F3;
+  --surface-color: #ffffff;
+  --surface-dark: #f5f5f5;
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --overlay-dark: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #7a7a7a;
+  --border-color: #404040;
+  --border-light: #505050;
+  --border-dark: #303030;
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-medium: rgba(255, 255, 255, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --header-bg: #0d0d0d;
+  --header-bg-hover: #1a1a1a;
+  --primary-color: #00d4ff;
+  --primary-hover: #00a8cc;
+  --primary-light: #40e0ff;
+  --secondary-color: #6ba82f;
+  --secondary-hover: #5a8a2a;
+  --success-color: #66bb6a;
+  --success-light: #88d488;
+  --success-dark: #4caf50;
+  --error-color: #ff7043;
+  --error-light: #ff8a65;
+  --warning-color: #ffca28;
+  --warning-light: #ffd740;
+  --info-color: #42a5f5;
+  --surface-color: #1e1e1e;
+  --surface-dark: #2d2d2d;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --overlay-dark: rgba(0, 0, 0, 0.9);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header .nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 991px) {
+  header .menu .nav-link {
+    color: var(--text-primary);
+  }
+  
+  [data-theme="dark"] header .menu {
+    background-color: var(--bg-secondary);
+  }
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] footer {
+  background-color: #1e3a50;
+}
+
+[data-theme="dark"] .footer-copyright {
+  background-color: var(--bg-secondary);
+}
+
+[data-theme="dark"] .footer-copyright .copyright-text {
+  color: var(--text-primary);
+}
+
+.footer__contacts,
+.footer__mailing--list,
+.footer__links {
+  color: var(--text-primary);
+}
+
+footer .footer__links a {
+  color: #f9f9f9;
+}
+
+[data-theme="dark"] footer .footer__links a {
+  color: var(--text-secondary);
+}
+
+/* Form Styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  background-color: var(--bg-primary);
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+input.error,
+textarea.error {
+  border-color: var(--error-color) !important;
+  background-color: rgba(244, 67, 54, 0.05);
+}
+
+label {
+  color: var(--text-primary);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+input.error ~ .error-message,
+textarea.error ~ .error-message {
+  display: block;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+.btn_styles {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.btn_styles:hover {
+  opacity: 0.9;
+}
+
+button:active,
+input[type="submit"]:active,
+.btn_styles:active {
+  transform: scale(0.98);
+}
+
+/* Cards and Sections */
+[data-theme="dark"] .mission,
+[data-theme="dark"] .projects-about,
+[data-theme="dark"] .contact-about {
+  opacity: 0.9;
+}
+
+.card-carousel {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+header #theme-toggle {
+  flex-shrink: 0;
+  margin: 0 1rem;
+  position: relative;
+  z-index: 1000;
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  header #theme-toggle {
+    margin: 0 0.75rem 0 auto;
+  }
+}
+
+/* Ensure form labels are visible */
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Accessibility */
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Success and Error States */
+.form-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid var(--success-color);
+  color: var(--success-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.form-success.show {
+  display: block;
+}
+
+.form-error {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.form-error.show {
+  display: block;
+}
+
+/* Loading state */
+.form-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.form-loading input[type="submit"]::after {
+  content: " Loading...";
+}
+
+/* Modal and Dropdown in dark mode */
+.dropdown-menu {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.dropdown-menu a {
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="dark"] .what_we_do,
+[data-theme="dark"] .our-work {
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .what_we_do--main-text {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .our-work>div>p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .about__foundation--text {
+  background-color: #1e3a50;
+}
+
+[data-theme="dark"] .about__section--text {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .cta-quote,
+[data-theme="dark"] .cta-quote:before,
+[data-theme="dark"] .cta-quote:after,
+[data-theme="dark"] cite {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .cta__form--title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .about__statement {
+  background-color: #3d5c00;
+}
+
+[data-theme="dark"] .about__mission--statement {
+  background-color: #162d6a;
+}
+
+[data-theme="dark"] .about__mission--text {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .mrembo-oil-heading,
+[data-theme="dark"] .mrembo-oil-text {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .health-list-items {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .cta-contact__form input,
+[data-theme="dark"] .cta-contact__form textarea {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .footer__mailing--list_email {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Section backgrounds in dark mode */
+[data-theme="dark"] .about__foundation--text {
+  background-color: #1e3a50;
+}
+
+[data-theme="dark"] .about__section--text {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .about__statement {
+  background-color: #2d4a6a;
+}
+
+[data-theme="dark"] .about__mission--statement {
+  background-color: #162d6a;
+}
+
+[data-theme="dark"] .about__mission--text {
+  color: var(--text-primary);
+}
+
+/* Card and surface backgrounds */
+[data-theme="dark"] .mission,
+[data-theme="dark"] .projects-about,
+[data-theme="dark"] .contact-about {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .card-carousel {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+/* Text content in dark mode */
+[data-theme="dark"] .about__section--text p,
+[data-theme="dark"] .about__section--text li,
+[data-theme="dark"] .about__section--text h1,
+[data-theme="dark"] .about__section--text h2,
+[data-theme="dark"] .about__section--text h3 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .our-work > div > p {
+  color: var(--text-secondary);
+}
+
+/* CTA section in dark mode */
+[data-theme="dark"] .cta-quote,
+[data-theme="dark"] .cta-quote:before,
+[data-theme="dark"] .cta-quote:after,
+[data-theme="dark"] cite {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .cta__form--title {
+  color: var(--text-primary);
+}
+
+/* Form elements in dark mode */
+[data-theme="dark"] .cta-contact__form input,
+[data-theme="dark"] .cta-contact__form textarea {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form__container {
+  background-color: var(--surface-color);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form__container h3,
+[data-theme="dark"] .form__container label {
+  color: var(--text-primary);
+}
+
+/* Donate page elements */
+[data-theme="dark"] .donate-page-content {
+  background-color: var(--surface-color);
+  color: var(--text-primary);
+}
+
+/* Health services pages */
+[data-theme="dark"] .mrembo-oil-heading,
+[data-theme="dark"] .mrembo-oil-text,
+[data-theme="dark"] .health-list-items {
+  color: var(--text-primary);
+}
+
+/* Page content sections */
+[data-theme="dark"] .about__section {
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .what_we_do,
+[data-theme="dark"] .our-work {
+  background-color: var(--bg-primary);
+}
+
+/* Prevent flash of wrong theme */
+html[data-theme="dark"] {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+html[data-theme="light"] {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #theme-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px;
+  }
+}
