@@ -436,6 +436,37 @@ function initKeyboardNavigation() {
 }
 
 // ============================================
+// Scroll-reveal animations
+// ============================================
+
+/**
+ * Reveal elements with a data-aos attribute as they scroll into view.
+ * Pairs with css/aos.css (already vendored). Respects
+ * prefers-reduced-motion via style.css, which collapses the transition
+ * duration to ~0 for those users - no extra branching needed here.
+ */
+function initScrollAnimations() {
+  const targets = document.querySelectorAll('[data-aos]');
+  if (!targets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('aos-animate'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('aos-animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => observer.observe(el));
+}
+
+// ============================================
 // Initialize Everything
 // ============================================
 
@@ -447,6 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initScrollEffects();
   initKeyboardNavigation();
+  initScrollAnimations();
 });
 
 // Initialize theme immediately to prevent FOUC

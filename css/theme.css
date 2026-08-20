@@ -521,3 +521,13 @@ html[data-theme="light"] {
     font-size: 16px;
   }
 }
+
+/* Scroll-reveal animations (css/aos.css) hide [data-aos] elements via
+   opacity:0 until JS adds .aos-animate. If JS never runs, that content
+   would stay invisible forever - the html.js class only gets added by
+   an inline script that always runs before paint, so its absence means
+   the page has no JS at all and content must degrade to fully visible. */
+html:not(.js) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
