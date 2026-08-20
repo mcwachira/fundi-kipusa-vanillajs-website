@@ -29,9 +29,12 @@ function initMobileNavigation() {
     document.body.style.overflow = '';
   });
 
-  // Close menu when clicking a link (for mobile)
+  // Close menu when clicking a link that actually navigates away.
+  // The dropdown trigger (e.g. "Projects") only opens a submenu, so it
+  // must not close the whole slide-out panel.
   const navLinks = menu.querySelectorAll('a[href]');
   navLinks.forEach(link => {
+    if (link.matches('.dropdown > a.nav-link')) return;
     link.addEventListener('click', () => {
       if (menu.classList.contains('act')) {
         menu.classList.remove('act');
@@ -47,18 +50,34 @@ function initMobileNavigation() {
 function initDropdowns() {
   const dropDown = document.querySelector('.dropdown');
   const dropdownMenu = document.querySelector('.dropdown-menu');
+  // The toggle trigger only (e.g. "Projects") - NOT the submenu links, which
+  // must be free to navigate to their own pages.
+  const trigger = dropDown ? dropDown.querySelector(':scope > a.nav-link') : null;
 
-  if (!dropDown || !dropdownMenu) return;
+  if (!dropDown || !dropdownMenu || !trigger) return;
 
-  dropDown.addEventListener('click', (e) => {
+  trigger.setAttribute('aria-haspopup', 'true');
+  trigger.setAttribute('aria-expanded', 'false');
+
+  trigger.addEventListener('click', (e) => {
     e.preventDefault();
-    dropdownMenu.classList.toggle('display');
+    const isOpen = dropdownMenu.classList.toggle('display');
+    trigger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Submenu links navigate normally; just close the menu once one is used.
+  dropdownMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      dropdownMenu.classList.remove('display');
+      trigger.setAttribute('aria-expanded', 'false');
+    });
   });
 
   // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
-    if (!dropDown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+    if (!dropDown.contains(e.target)) {
       dropdownMenu.classList.remove('display');
+      trigger.setAttribute('aria-expanded', 'false');
     }
   });
 }
