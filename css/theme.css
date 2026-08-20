@@ -207,13 +207,6 @@ input[type="submit"]:active,
   transform: scale(0.98);
 }
 
-/* Cards and Sections */
-[data-theme="dark"] .mission,
-[data-theme="dark"] .projects-about,
-[data-theme="dark"] .contact-about {
-  opacity: 0.9;
-}
-
 .card-carousel {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -226,12 +219,12 @@ input[type="submit"]:active,
   background-color: var(--bg-secondary);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -383,7 +376,7 @@ a:focus-visible {
   color: var(--text-primary);
 }
 
-[data-theme="dark"] .cta-contact__form input,
+[data-theme="dark"] .cta-contact__form input:not([type="submit"]),
 [data-theme="dark"] .cta-contact__form textarea {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -417,12 +410,8 @@ a:focus-visible {
 }
 
 /* Card and surface backgrounds */
-[data-theme="dark"] .mission,
-[data-theme="dark"] .projects-about,
-[data-theme="dark"] .contact-about {
-  background-color: var(--surface-color);
-  border-color: var(--border-color);
-}
+/* .mission / .projects-about / .contact-about keep their brand colors
+   (green/blue/yellow) in both themes - intentionally not overridden here. */
 
 [data-theme="dark"] .card-carousel {
   background-color: var(--surface-color);
@@ -455,7 +444,7 @@ a:focus-visible {
 }
 
 /* Form elements in dark mode */
-[data-theme="dark"] .cta-contact__form input,
+[data-theme="dark"] .cta-contact__form input:not([type="submit"]),
 [data-theme="dark"] .cta-contact__form textarea {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -530,4 +519,11 @@ html[data-theme="light"] {
 html:not(.js) [data-aos] {
   opacity: 1 !important;
   transform: none !important;
+}
+
+/* Icon set is black line-art on a transparent background, invisible
+   against the dark theme's near-black surfaces - invert to white. */
+[data-theme="dark"] .home-icons,
+[data-theme="dark"] .project-icons {
+  filter: invert(1);
 }
